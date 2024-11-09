@@ -1,0 +1,115 @@
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/nendangki.jpg') no-repeat center center fixed; /* Đặt ảnh nền */
+    background-size: cover; /* Để ảnh nền bao phủ toàn trang */
+    position: relative;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #dbdfe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.sign-in {
+    width: 90%;
+    padding: 90px 75px;
+    background-color: #ffffff;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+.sign-in-heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: C;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sign-in-social-text {
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.sign-in-label {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sign-in-input {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #dbdfe7;
+    outline: none;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.sign-in-submit {
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #82c91e;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    margin-bottom: 25px;
+}
+
+.sign-in-submit:hover {
+    background-color: #74b41c;
+}
+
+.sign-in-already {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    color: #999;
+}
+
+.sign-in-login {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+}

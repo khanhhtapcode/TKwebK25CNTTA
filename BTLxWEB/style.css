@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #6dbfe2;
+    --subtext: "Roboto", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.video-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: relative;
+}
+
+.btn {
+    height: 40px;
+    width: 120px;
+    background-color: var(--main-color);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+.style::after {
+    content: "";
+    /* Tạo một phần tử giả */
+    display: block;
+    /* Hiển thị thành khối */
+    width: 30px;
+    /* Chiều rộng của gạch dưới */
+    height: 3px;
+    /* Độ dày của gạch dưới */
+    background: #ff4500;
+    /* Màu sắc của gạch dưới */
+    margin: 10px auto;
+    /* Căn giữa */
+}
+
+.style {
+    padding: 10px;
+    font-size: 2.5rem;
+    /* Kích thước chữ lớn hơn */
+    color: #333;
+    /* Màu chữ */
+    text-align: center;
+    /* Căn giữa */
+    margin-bottom: 10px;
+    /* Khoảng cách phía dưới */
+    font-weight: bold;
+    /* Chữ đậm */
+    text-transform: uppercase;
+    /* Chữ in hoa */
+    position: relative;
+    /* Để dễ dàng căn chỉnh */
+}
+
+
+.header-top i {
+    position: fixed;
+    margin: 40px;
+    font: 30px;
+    /* color: var(--main-color); */
+    cursor: pointer;
+    z-index: 1;
+    font-size: 40px;
+    background: none;
+}
+
+.header-top ul {
+    position: fixed;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 100px 0 0 100px;
+    background-color: var(--main-color);
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    background: none;
+}
+
+.header-top ul.active {
+    display: block;
+    opacity: 1;
+}
+
+.header-top ul li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    animation: fade 0.3s linear backwards;
+    animation-delay: calc(0.3s * var(--x));
+}
+
+@keyframes fade {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+.header-top ul li a {
+    display: block;
+    background-color: var(--main-color);
+    padding: 12px;
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+}
+
+.header-top ul li a:hover {
+    color: rgb(123, 103, 237);
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 150px 150px 0 150px;
+    text-align: center;
+    width: 580px;
+}
+
+.header-content h1 {
+    color: black;
+    font-size: 50px;
+}
+
+.header-content h2 {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.header-content>p {
+    color: var(--main-color);
+}
+
+form {
+    width: 300px;
+    padding: 30px 12px;
+    display: block;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+form h1 {
+    color: #333;
+    font-size: 30px;
+}
+
+form select,
+input {
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    outline: none;
+    background-color: #dddd;
+    border: none;
+}
+
+form p {
+    text-align: left;
+    color: var(--main-color);
+    margin: 8px 0 3px;
+}
+
+form button {
+    height: 35px;
+    width: 150px;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+form button:hover {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+/* -------------------------------------------------------Nice-place----------------------------------------------------------- */
+.nice-place {
+    display: flex;
+    padding: 50px 0;
+    background-color: #f4f4ec;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 50px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nice-place-items {
+    padding: 30px;
+    width: 30%;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Không dùng absolute ở đây */
+}
+
+.nice-place-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.nice-place-text {
+    padding: 20px;
+    background: linear-gradient(to top, rgba(57, 54, 54, 0.8), rgba(150, 114, 114, 0));
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.nice-place-items:hover .nice-place-text {
+    transform: translateY(0);
+    /* Hiển thị text khi hover */
+}
+
+.h1-style {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--main-color);
+    position: relative;
+}
+
+.nice-place-text h2 {
+    color: var(--main-color);
+}
+
+.nice-place-text i {
+    color: #e8ef2b;
+}
+
+.nice-place-text p {
+    color: #fff;
+    margin: 12px 0;
+}
+
+.h1-style::before {
+    position: absolute;
+    content: " ";
+    height: 5px;
+    width: 150px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.h1-style::after {
+    position: absolute;
+    content: "\260E";
+    width: 40px;
+    height: 20px;
+    color: red;
+    background-color: white;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* -------------------------------------------------------Tour Secion--------------------------------- */
+.tour {
+    padding: 20px 20px;
+}
+
+.tour-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour-title h2 {
+    padding-bottom: 20px;
+}
+
+.tour-item {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Căn giữa các phần tử trong tour-item */
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    transition: all 0.3s ease;
+}
+
+.tour-content-item {
+    width: 30%;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3 ease;
+}
+
+.tour-content-item:hover {
+    box-shadow: 2px 2px 10px var(--main-color);
+}
+
+.tour-content-item:hover,
+.tour-item:hover {
+    transform: translateY(-5px);
+}
+
+.tour-content-item img {
+    transition: all .3s ease;
+}
+
+/* Phần giá tour */
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Tạo khoảng cách giữa giá cũ và giá mới */
+    margin-bottom: 10px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.new-price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Nút khám phá */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    /* Đảm bảo chữ nằm giữa */
+}
+
+.btn:hover {
+    background-color: rgb(48, 48, 188);
+
+}
+
+.btn-tour {
+    height: 40px;
+    width: 100px;
+    background-color: var(--main-color);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* Căn giữa văn bản bên trong */
+    line-height: 40px;
+    /* Căn giữa chữ theo chiều dọc */
+    text-decoration: none;
+    /* Loại bỏ gạch chân nếu là thẻ <a> */
+}
+
+.btn-tour a {
+    color: inherit;
+    /* Kế thừa màu chữ từ .btn-tour */
+    font-size: 14px;
+}
+
+/* Hiệu ứng hover */
+.btn-tour:hover {
+    background-color: bisque;
+    color: black;
+}
+
+/* Bố cục tour-items */
+.tour-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tour-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tour-item p {
+    font-size: 15px;
+    color: #666;
+    /* margin-bottom: 15px; */
+}
+
+/* -----------------------------------------------------ABOUT Tour------------------------------------------------------- */
+.about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.about h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content-right {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-content-right p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-content-right h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-content-left {
+    width: 50%;
+}
+
+.about-content-left img {
+    width: 105%;
+    border-radius: 5px;
+}
+
+.about-content-right {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.about-content-right h2 {
+    font-family: var(--subtext);
+    font-weight: normal;
+    color: var(--main-color);
+}
+
+.about-content-right p {
+    font-size: 16.5px;
+    margin: 20px 0;
+    font-family: var(--subtext);
+}
+
+.about-content-right .btn {
+    background-color: var(--main-color, #3498db);
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-content-right li {
+    text-align: left;
+    font-size: 15px;
+    font-family: var(--subtext);
+    color: var(--main-color);
+    padding-left: 5px;
+}
+
+.about-content-right i,
+i {
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.service {
+    margin-top: 30px;
+}
+
+.services-item {
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    background-color: #b8d8ec;
+    /* Light blue background */
+    border-radius: 5px;
+}
+
+.services-item:hover {
+    box-shadow: 2px 2px 2px 3px rgb(57, 56, 75);
+    transition: all 0.2s ease;
+}
+
+.services-item img {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.btn-about:hover {
+    box-shadow: #b8d8ec;
+    transition: all 0.2s ease;
+}
+
+/* --------------------------------------Review-------------------------------- */
+/* review item text bao gom anh phan hoi va chu */
+/* ----review-item-img la anh avatar */
+.review {
+    padding: 100px 0;
+
+}
+
+.review-item {
+    width: 30%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 12px;
+    transition: .3s ease;
+}
+
+.review-item:hover {
+    box-shadow: 2px 2px 10px var(--main-color);
+}
+
+/* item hoher khi tro vao */
+.review-item:hover .review-item-text img {
+    transform: translateY(-15px);
+}
+
+.review-item-text span {
+    color: var(--main-color);
+}
+
+.review-item-text {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.review-item-img {
+    padding: 12px;
+}
+
+.review-item-text p {
+    font-size: 15px;
+    margin: 20px;
+    font-family: var(--subtext);
+}
+
+.review-item-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.review-item-text img {
+    width: 50px;
+    transition: all .3s ease;
+}
+
+.review-item-img h2 {
+    font-size: 14.5px;
+    font-family: var(--subtext);
+    font-weight: normal;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.review-item-img p {
+    font-size: 10px;
+    color: #333;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.review-item-img-text {
+    width: 50%;
+}
+
+/* ------------------------------------------Responsive code--------------------------------------- */
+@media(max-width: 575px) {
+    .header-content {
+        width: 50%;
+    }
+
+    .nice-place {
+        padding: 50px;
+    }
+
+    .nice-place-items {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 12px;
+    }
+
+    .about {
+        padding: 50px 0;
+    }
+
+    .about-content-left {
+        width: 100%;
+    }
+
+    .about-content-right {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .services-item {
+        width: 100%;
+        margin-bottom: 20px;
+        margin: 12px;
+    }
+
+    .tour {
+        padding: 50px;
+    }
+
+    .tour-item img {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+}
+
+/* -----------------------------------Sign up---------------------------------- */
+.signup {
+    padding: 30px 0;
+}
+
+.signup-content {
+    background-color: #b6cdec;
+    padding: 30px 0;
+    text-align: center;
+
+}
+
+.signup-content input {
+    height: 35px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* -----------------------------------Lien he---------------------------------- */
+.contact {
+    padding: 50px 0;
+}
+
+.contact-content-item {
+    width: 50%;
+    padding: 6px 12px;
+
+}
+
+.contact-content-top input {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.contact-content-bottom {
+    padding: 6px 12px;
+    text-align: center;
+}
+
+.contact-content-bottom textarea {
+    width: 319%;
+    height: 100px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    background-color: #dddddd;
+}
+
+.contact-content-bottom button {
+    padding-bottom: 15px;
+    display: block;
+}

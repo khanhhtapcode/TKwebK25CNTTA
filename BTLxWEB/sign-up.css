@@ -1,0 +1,207 @@
+html {
+    font-size: 60%;
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/nendangki.jpg') no-repeat center center fixed;
+    /* Đặt ảnh nền */
+    background-size: cover;
+    /* Để ảnh nền bao phủ toàn trang */
+    position: relative;
+}
+
+body {
+    width: 80%;
+    min-height: 100vh;
+    background-color: #dbdfe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.sign-up {
+    width: 100%;
+    padding: 50px 75px;
+    background-color: #ffffff;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+.sign-up-heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: C;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sign-up-social-google {
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #db4437;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 20px 10px rgba(76, 11, 244, 0.2);
+    outline: none;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.sign-up-social-google:hover {
+    background-color: #c74135;
+}
+
+.sign-up-social-facebook:hover {
+    background-color: #3e60ea;
+}
+
+.sign-up-social-facebook {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #4c6ff4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 5px 5px rgba(76, 11, 244, 0.2);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.sign-up-social i {
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4c6ff4;
+    font-size: 30px;
+}
+
+.sign-up-social-text {
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign-up-or {
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+    margin: 20px auto;
+    position: relative;
+}
+
+.sign-up-or span {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.sign-up-or:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.sign-up-label {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sign-up-input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #dbdfe7;
+    outline: none;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.sign-up-submit {
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #82c91e;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    margin-bottom: 25px;
+}
+
+.sign-up-submit:hover {
+    background-color: #74b41c;
+}
+
+.sign-up-already {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    color: #999;
+}
+
+.sign-up-login {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+}
