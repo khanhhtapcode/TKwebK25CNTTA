@@ -1,19 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
     --main-color: #182138;
     --sub-color: #202960;
     --text-color: #fff;
     --backgound-color: #f6de9f;
+    --sub-text: font-family: "Playfair Display", serif;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
     box-sizing: border-box;
 }
+
+.sign-up-btn{
+    position: absolute;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .top ul.active {
     display: block;
     opacity: 1;
@@ -30,9 +44,10 @@
 @keyframes fade {
     0% {
         transform: translateY(-30px);
-        opacity: 0;
+        opacity: 50%;
     }
 }
+
 .btn {
     background-color: transparent;
     font-family: "Fira Sans", Sans-serif;
@@ -213,6 +228,7 @@ a {
     background-attachment: fixed;
     z-index: -1;
     animation: Inout 5s infinite;
+    opacity: 80%;
 }
 
 @keyframes Inout {
@@ -262,6 +278,7 @@ a {
 /* about */
 .about {
     background-color: var(--backgound-color);
+    /* background-image: url(/CodeWeb/images/background-all.png); */
 }
 
 .about .about-item img {
@@ -313,7 +330,7 @@ a {
     width: 100%;
     background-color: #f6de9f;
     font-family: "Playfair Display", Sans-serif;
-    background-image: url(images/Untitled.png);
+    background-image: url(images/background-all.png);
     background-size: cover;
 }
 
@@ -327,27 +344,31 @@ a {
     margin: 15px 12px;
     border: none;
     font-size: 25px;
-    color: var(--text-color);
+    color: #7a4054;
     cursor: pointer;
     transition: all .3s ease;
+    font-weight: bold;
+    font-family: var(--sub-text);
 }
 
 .menu-title .menu-button:hover {
-    color: var(--sub-color);
+    color: var(--text-color);
 }
 
 .menu-title .menu-button:active {
     color: var(--sub-color);
 }
-.food-items{
-    width: 33.33%; 
+
+.food-items {
+    width: 33.33%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px;
     text-align: center;
 }
-.food-items::before{
+
+.food-items::before {
     content: '';
     display: block;
     position: absolute;
@@ -356,46 +377,53 @@ a {
     border: 2px dashed #fff;
     max-width: 1024px;
 }
-.food-items:hover .food-item p{
+
+.food-items:hover .food-item p {
     color: var(--sub-color);
 }
-.food-items:hover .food-price p{
+
+.food-items:hover .food-price p {
     color: var(--text-color);
 }
-.food-item{
+
+.food-item {
     display: flex;
     align-items: center;
     margin-left: 33.33px;
 }
-.food-item img{
+
+.food-item img {
     vertical-align: middle;
     display: inline-block;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
 }
-.food-item p{
+
+.food-item p {
     color: var(--text-color);
     transition: all .3s ease;
     font-size: 12px;
 }
-.food-item h2{
+
+.food-item h2 {
     padding-top: 10px;
-    padding-left: 70px;
+    padding-left: 30px;
     color: #475467;
     font-family: "Fira Sans", Sans-serif;
     font-size: 20px;
     text-align: center;
     align-items: center;
 }
-.food-price p{
-    padding-left: 150px;
-    padding-top: 5px;
-    font-size: 15px;
-    color: var(--text-color);
+
+.food-price p {
+    padding-left: 100px;
+    font-size: 20px;
+    color: black;
     transition: all .3s ease;
     cursor: pointer;
 }
+
 /* ------------------------------------------------Phan Hoi----------------------------------- */
 /* review item text bao gom anh phan hoi va chu */
 /* ----review-item-img la anh avatar */
@@ -415,11 +443,13 @@ a {
     opacity: 60%;
     border-radius: 5px;
 }
-h2{
+
+h2 {
     display: block;
     unicode-bidi: isolate;
     color: #344054;
 }
+
 .review-item:hover {
     box-shadow: 2px 2px 10px var(--main-color);
 }
@@ -436,7 +466,7 @@ h2{
 .review-item-text {
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 5px solid #ddd;
 }
 
 .review-item-img {
@@ -479,53 +509,117 @@ h2{
 .review-item-img-text {
     width: 50%;
 }
-.container h1{
+
+.container h1 {
     color: #FFFFFF;
     font-family: "Playfair Display", serif;
-    font-size: 80px;
+    font-size: 65px;
     font-weight: 500;
     line-height: 1.4em;
     text-align: center;
 }
-/* --------------------Team bếp let him cook */
-.team{
-    background-image: url(images/Untitled.png);
+
+/* --------------------Team bếp let him cook------------------------------------------ */
+.team {
+    background-image: url(images/background-all.png);
 }
-.team-items{
-    padding: 10px 50px;
+
+.team-items {
+    padding: 5px 50px;
     width: cacl(100%/3);
     position: relative;
     transition: all.3s ease;
 }
+
 .team-items img {
     width: 300px;
     border-radius: 50px;
+    opacity: 90%;
 }
-.team-items:hover .team-items-text{
-    background-color: #f5e3a7;
+
+.team-items:hover .team-items-text {
+    background-color: #f2e4b7;
     transform: translateY(-20px);
 }
-.team-items:hover img{
+
+.team-items:hover img {
     transform: skewy(2deg);
 }
-.team-items-text{
+
+.team-items-text {
     position: absolute;
-    padding: 5px 0;
     right: 10px;
     left: 10px;
     bottom: p;
-    background-color: none;
+    background-color: #dbc890;
     text-align: center;
     align-items: center;
     border-radius: 20px;
-    transform: translateY(50%);
     transition: all.3s ease;
+
 }
-.team-items-text h2 span{
+
+.team-items-text h2 span {
     color: var(--text-color);
     font-family: "Playfair Display", serif;
 }
-.team-items-text span{
+
+.team-items-text span {
     font-weight: bold;
 }
 
+/* ------------------------------------Footer------------------------------------ */
+.footer {
+    background-image: url(images/footer.jpg);
+    padding-top: 100px;
+    padding-right: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* .footer::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    opacity: 0.4;
+    z-index: 1;
+} */
+.footer h2 {
+    color: var(--text-color);
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: var(--sub-text);
+}
+
+.footer p {
+    color: white;
+    font-family: var(--subtext);
+    margin-bottom: 12px;
+}
+
+.footer-item {
+    text-align: center;
+    width: calc(100%/3);
+}
+
+.footer-item i {
+    color: white;
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 50px 0;
+    color: var(--text-color);
+    border-top: 2px solid var(--text-color);
+    font-family: var(--sub-text);
+    margin-top: 20px;
+}

@@ -13,6 +13,7 @@ window.addEventListener("scroll", function () {
 })
 // scripts menu hien tung muc
 const menubarBtn = document.querySelector('.top i')
-menubarBtn.addEventListener("click", function (){
+menubarBtn.addEventListener("click", function () {
     document.querySelector('.top ul').classList.toggle('active')
 })
+
