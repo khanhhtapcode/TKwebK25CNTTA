@@ -17,3 +17,43 @@ menubarBtn.addEventListener("click", function () {
     document.querySelector('.top ul').classList.toggle('active')
 })
 
+// menu 
+    // Lấy tất cả các liên kết trong menu
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            const targetId = this.getAttribute('href').substring(1); // Lấy id của phần cần cuộn tới
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth', // Cuộn mượt
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+
+document.querySelectorAll('.menu-nav a').forEach(anchor=>{
+    anchor.addEventListener('click', function (e){
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetElement.offsetTop - 20, // Điều chỉnh khoảng cách
+            behavior: 'smooth'
+        });
+    });
+});
+
+// const menuTitle = document.querySelector(".menu-title");
+// menuTitle.addEventListener('click', function(x){
+//     if(x.target.classList.contains)
+// })
+
+
+
+ 
+
+

@@ -21,13 +21,16 @@
                     <img src="images/TMKLogo2020Xanh.png" alt="Logo">
                 </div>
                 <div class="menu-items">
+                    <!---------------- nav để chưa các liên kết điều hướng ------------------>
+                    <nav data-aos="zoom-in-up" data-aos-duration="1500"></nav>
                     <ul>
-                        <li class="menu-item" style="--x:1;"><a href="">Trang Chủ</a></li>
-                        <li class="menu-item" style="--x:2;"><a href="">Về chúng tôi</a></li>
-                        <li class="menu-item" style="--x:3;"><a href="">Thực đơn</a></li>
-                        <li class="menu-item" style="--x:4;"><a href="">Phản hồi</a></li>
-                        <li class="menu-item" style="--x:5;"><a href="">Nhân sự</a></li>
-                        <li class="menu-item" style="--x:6;"><a href="">Liên hệ</a></li>
+                        <li class="menu-item" style="--x:1;"><a href="#home">Trang Chủ</a></li>
+                        <li class="menu-item" style="--x:2;"><a href="#about">Về chúng tôi</a></li>
+                        <li class="menu-item" style="--x:3;"><a href="#menu">Thực đơn</a></li>
+                        <li class="menu-item" style="--x:4;"><a href="#feedback">Phản hồi</a></li>
+                        <li class="menu-item" style="--x:5;"><a href="#employee">Nhân sự</a></li>
+                        <li class="menu-item" style="--x:6;"><a href="#contact">Liên hệ</a></li>
+                        </nav>
                     </ul>
                 </div>
                 <div class="menubar">
@@ -37,14 +40,17 @@
         </div>
     </section>
 
-    <section class="big-image">
+    <section class="big-image" id="home">
         <div class="big-image-content" data-aos="fade-right" data-aos-duration="1500">
             <h2>Nhà Hàng Thái Market</h2>
             <p>Đẳng cấp lên ngôi, niêm vui mong chờ, giây phút mộng mơ</p>
-            <button class="btn"><a href="/CodeWeb/sign-in.html" target="_blank" rel="noopener">Đăng Nhập</a></button>
+            <button class="btn"><a href="Booking/booking.html" target="_blank" rel="noopener">Đặt bàn</a></button>
         </div>
     </section>
-    <section class="about section-padding">
+
+
+    <!----------------------------------------------------------------------- about-----------------------------------------------------------------  -->
+    <section class="about section-padding" id="about">
         <div class="container">
             <div class="row">
                 <div class="section-title" data-aos="fade-right">
@@ -64,31 +70,39 @@
 
                     </button>
                 </div>
-                <div class="about-item">
+                <div class="about-item" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src="/CodeWeb/images/banner.webp" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <section class="menu section-padding">
+
+
+
+    <!-- menu -->
+    <section class="menu section-padding" id="menu">
         <div class="container">
             <div class="row">
                 <div class="section-title">
-                    <h2 data-title="Món Đặc Trưng"></h2>
+                    <h2 data-title="Món Đặc Trưng">Thực đơn của chúng tôi</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="menu-title" data-aos="zoom-in-up" data-aos-duration="1500">
                     <h2>Ẩm thực Thái Lan mang một sự quyến rũ đặc biệt, không chỉ đối với khẩu vị của người Việt mà còn
                         đối với bất kỳ ai trên Thế giới</h2>
-                    <button class="menu-button active">Lunch</button>
-                    <button class="menu-button">Diner</button>
-                    <button class="menu-button">Drinks</button>
-                    <button class="menu-button">Appetizer</button>
+                    <nav class="menu-nav">
+                        <ul>
+                            <li><a href="#lunch">Bữa Trưa</a></li>
+                            <li><a href="#diner">Bữa Tối</a></li>
+                            <li><a href="#appetizer">Khai Vị</a></li>
+                            <li><a href="#drinks">Đồ Uống</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div class="row justify-content">
-                <div class=" row food-items">
+                <div class=" row food-items" id="lunch">
                     <div class="row food-item" data-aos="zoom-in-left" data-aos-duration="1500">
                         <img src="/CodeWeb/images/mon1.webp" alt="">
                         <h2>Xoài nếp hoàng kim</h2>
@@ -97,7 +111,9 @@
                         <p>150.000 VND</p>
                     </div>
                 </div>
-                <div class="row food-items" data-aos="zoom-in-left" data-aos-duration="1500">
+
+
+                <div class="row food-items " data-aos="zoom-in-left" data-aos-duration="1500" id="lunch">
                     <div class=" row food-item">
                         <img src="/CodeWeb/images/mon2.webp" alt="">
                         <h2>Xôi Xoài (Khao Niew)</h2>
@@ -106,16 +122,16 @@
                         <p>150.000 VND</p>
                     </div>
                 </div>
-                <div class="row food-items" data-aos="zoom-in-left" data-aos-duration="1500">
+                <div class="row food-items" data-aos="zoom-in-left" data-aos-duration="1500" id="lunch">
                     <div class="row justify-content food-item">
-                        <img src="/CodeWeb/images/mon3.webp" alt="">
+                        <img src="/CodeWeb/images/hutieuthai.jpg" alt="">
                         <h2>Hủ Tiếu Thái</h2>
                     </div>
                     <div class="food-price">
                         <p>150.000 VND</p>
                     </div>
                 </div>
-                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500">
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="diner">
                     <div class="row justify-content food-item">
                         <img src="/CodeWeb/images/mon4.webp" alt="">
                         <h2>Gà Xiên Nướng</h2>
@@ -124,7 +140,7 @@
                         <p>150.000 VND</p>
                     </div>
                 </div>
-                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500">
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="diner">
                     <div class="row justify-content food-item">
                         <img src="/CodeWeb/images/mon5.webp" alt="">
                         <h2>Gỏi Đu Đủ</h2>
@@ -133,7 +149,26 @@
                         <p>150.000 VND</p>
                     </div>
                 </div>
-                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500">
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="diner">
+                    <div class="row justify-content food-item">
+                        <img src="/CodeWeb/images/chagiothai.jpg" alt="">
+                        <h2>Chả Giò Thái</h2>
+                    </div>
+                    <div class="food-price">
+                        <p>150.000 VND</p>
+                    </div>
+                </div>
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="appetizer">
+                    <div class="row justify-content food-item">
+                        <img src="/CodeWeb/images/canhcuatom.webp" alt="">
+                        <h2>Canh Chua Tôm</h2>
+                    </div>
+                    <div class="food-price">
+                        <p>180.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="appetizer">
                     <div class="row justify-content food-item">
                         <img src="/CodeWeb/images/mon6.webp" alt="">
                         <h2>Pad Thái truyền thống</h2>
@@ -143,12 +178,52 @@
                     </div>
                 </div>
 
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="appetizer">
+                    <div class="row justify-content food-item">
+                        <img src="/CodeWeb/images/comchienhaisan1.webp" alt="">
+                        <h2>Cơm Chiên Hải Sản</h2>
+                    </div>
+                    <div class="food-price">
+                        <p>170.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="drinks">
+                    <div class="row justify-content food-item">
+                        <img src="/CodeWeb/images/trasuathai.webp" alt="">
+                        <h2>Trà Sữa Thái</h2>
+                    </div>
+                    <div class="food-price">
+                        <p>50.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="drinks">
+                    <div class="row justify-content food-item">
+                        <img src="/CodeWeb/images/nuoceptraicay.webp" alt="">
+                        <h2>Nước Ép Trái Cây</h2>
+                    </div>
+                    <div class="food-price">
+                        <p>60.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="row food-items" data-aos="zoom-in-right" data-aos-duration="1500" id="drinks">
+                    <div class="row justify-content food-item">
+                        <img src="/CodeWeb/images/tradao.webp" alt="">
+                        <h2>Trà Đào</h2>
+                    </div>
+                    <div class="food-price">
+                        <p>55.000 VND</p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </section>
     <!---------------------------------------Phan Hoi--------------------------------------------- -->
-    <section class="review">
+    <section class="review" id="feedback">
         <div class="container">
             <div class="section-title" data-aos="fade-up-right" data-aos-duration="1500">
                 <h2 data-title="OUR STORY">Phản Hồi</h2>
@@ -208,7 +283,7 @@
         </div>
     </section>
     <!-- ---------------------------------Dau Bep------------------------------------- -->
-    <section class="team section-padding">
+    <section class="team section-padding" id="employee">
         <div class="container">
             <div class="row">
                 <div class="section-title" data-aos="fade-up-right" data-aos-duration="1500">
@@ -224,7 +299,7 @@
                     </div>
                 </div>
 
-                <div class="team-items" data-aos="zoom-in-up">
+                <div class="team-items" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src="images/daubep2.jpg" alt="">
                     <div class="team-items-text">
                         <h2>Lưu Đức Quang</h2>
@@ -232,7 +307,7 @@
                     </div>
                 </div>
 
-                <div class="team-items" data-aos="zoom-in-up">
+                <div class="team-items" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src="images/daubep3.jpg" alt="">
                     <div class="team-items-text">
                         <h2>Ma Thế Ngọc</h2>
@@ -244,7 +319,7 @@
             </div>
         </div>
     </section>
-    <section class="footer">
+    <section class="footer" id="contact">
         <div class="footer-bg">
 
         </div>
