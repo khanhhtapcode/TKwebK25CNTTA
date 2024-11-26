@@ -459,7 +459,7 @@ a {
 .review {
     width: 100%;
     padding: 100px 0;
-    background-image: url(/CodeWeb/images/back-review.webp);
+    background-image: url(/TKwebK25CNTTA-main/TKwebK25CNTTA-main/CodeWeb/images/back-review.webp);
 }
 
 .review-item {
@@ -599,7 +599,7 @@ h2 {
 
 /* ------------------------------------Footer------------------------------------ */
 .footer {
-    background-image: url(images/footer.jpg);
+    background-image: url(/TKwebK25CNTTA-main/TKwebK25CNTTA-main/CodeWeb/images/footer.jpg);
     padding-top: 100px;
     padding-right: 80px;
     background-position: center;
@@ -645,7 +645,7 @@ h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 1;
 }
  .chat-facebook,.call-hotline {
     display: block;
@@ -665,5 +665,58 @@ h2 {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
-    border-radius: 5%;
+    border-radius: 5px;
 }
+/*---------------------------------------- contact-----------------------------------  */
+.float-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 1; /* Đặt lớn hơn để hiện trên các lớp khác */
+    transition: all 0.3s ease;
+}
+
+.contact-trigger {
+    background-color: #007bff; /* Màu nền */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-trigger:hover {
+    background-color: #0056b3; /* Màu khi hover */
+}
+
+.contact-icons {
+    display: none; /* Mặc định ẩn */
+    margin-bottom: 10px;
+    position: absolute; /* Đặt tuyệt đối để dễ di chuyển */
+    right: 100%; /* Đặt các icon ra ngoài bên phải */
+    
+}
+
+.float-contact:hover .contact-icons {
+    display: contents; /* Chuyển thành dạng hàng ngang */
+    animation: slideIn 0.5s ease forwards; /* Gọi animation */
+}
+
+.contact-icons div {
+    margin: 0 5px; /* Khoảng cách nhỏ giữa các icon */
+}
+
+/* Animation trượt ngang */
+@keyframes slideIn {
+    from {
+        transform: translateX(100px); /* Bắt đầu từ bên ngoài (phải) */
+        opacity: 0; /* Hiện dần */
+    }
+    to {
+        transform: translateX(0); /* Trở về vị trí bình thường */
+        opacity: 1; /* Hiện hoàn toàn */
+    }
+}
+
