@@ -46,7 +46,23 @@ document.querySelectorAll('.menu-nav a').forEach(anchor => {
     });
 });
 
-// const menuTitle = document.querySelector(".menu-title");
-// menuTitle.addEventListener('click', function(x){
-//     if(x.target.classList.contains)
-// })
+document.querySelectorAll('.menu-nav a').forEach(navItem => {
+    navItem.addEventListener('click', () => {
+        // Lấy id phần cần hiển thị từ liên kết menu
+        const targetId = navItem.getAttribute('href').substring(1);
+        
+        // Ẩn tất cả các mục food-items
+        document.querySelectorAll('.food-items').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Hiển thị mục được chọn
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.classList.add('active');
+        }
+    });
+});
+
+// Optional: Set the default visible section to 'lunch'
+document.getElementById('lunch').classList.add('active');
