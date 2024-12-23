@@ -124,7 +124,7 @@ body {
 .content p {
     font-size: 20px;
     line-height: 1.5;
-    color: #17225f;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -144,7 +144,7 @@ body {
     padding: 40px;
     background-color: #fff2cc;
     text-align: center;
-    background-image: url(/CodeWeb/images/background-all.png);
+    background-image: url(../images/background2-bôking.webp);
     font-family: var(--sub-text);
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .combo-section h3 {
-    color: #17225F;
+    color: #fefeff;
     font-family: "Playfair Display", Sans-serif;
     font-size: 25px;
     line-height: 1.4em;
@@ -177,24 +177,24 @@ body {
     padding: 10px;
 }
 
-
 .combo-list {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
     flex-wrap: wrap;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
 }
 
 .combo-item {
-    flex: 30%;
-    /* Allows flexible width and adapts better to the container */
-    max-width: 100%;
-    background-color: #ffffff;
+    flex: 1 1 30%; /* Điều chỉnh tỷ lệ phần tử, cho phép các phần tử chiếm 30% bề rộng */
+    max-width: 80%; /* Giới hạn chiều rộng tối đa của mỗi phần tử */
+    background-color: #f9f0c1;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
+    align-items: center;
     border-radius: 8px;
     margin: 10px;
-    transition: all.3s ease;
+    transition: all 0.3s ease;
 }
 
 .combo-item:hover {
@@ -203,9 +203,105 @@ body {
 }
 
 .combo-item img:hover {
-    transform: translateY(-5%);
+    transform: translateY(-8%);
 }
 
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.combo-section {
+    padding: 20px;
+    background-color: #abe8a0;
+}
+
+.combo-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.combo-item img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.combo-item img:hover {
+    transform: scale(1.05);
+}
+
+/* General overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjusted opacity */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Increased z-index for better visibility */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Các kiểu chung cho overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Độ mờ đã điều chỉnh */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Tăng z-index để hiển thị trên cùng */
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+}
+
+/* Kiểu dáng cho nội dung của overlay */
+.overlay-content {
+    position: relative;
+    background-color: #fff; /* Thêm nền trắng cho nội dung để tăng độ tương phản */
+    padding: 20px; /* Padding tùy chọn cho nội dung */
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ */
+    max-width: 80%; 
+    max-height: 80%; 
+    overflow: auto; /* Đảm bảo cuộn khi nội dung tràn ra ngoài */
+}
+
+/* Kiểu cho ảnh phóng to */
+#zoomed-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+/* Làm cho overlay hiển thị khi có class active */
+.overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Hiệu ứng nền tối mờ phía sau nội dung */
+.overlay-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Nền tối hơn */
+    z-index: -1; /* Đảm bảo nội dung xuất hiện trên đầu */
+}
 
 
 
@@ -273,20 +369,23 @@ body {
 
 .branch-group h4 {
     font-size: 20px;
-    color: #333;
+    color: #fff5f5;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .branch-group ul {
-    list-style-type: disc;
+    /* list-style-type: none; */
     padding-left: 20px;
+    list-style: none;
 }
 
 .branch-group li {
     font-size: 15px;
-    color: #555;
-    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ebd8d8;
+    margin-bottom: 2px;
+    list-style: none;
 }
 
 .footer {
@@ -404,10 +503,10 @@ body {
 }
 
 #modal h2 {
-    font-size: 20px; /* Heading size */
+    font-size: 20px; 
     font-weight: bold;
-    color: #182138; /* Color for the header text */
-    margin-bottom: 15px; /* Space below heading */
+    color: #182138; 
+    margin-bottom: 15px; 
 }
 
 #modal p, #modal label {
@@ -442,7 +541,6 @@ button#button_close {
 @media (max-width: 768px) {
     .combo-item {
         flex: 1 1 100%;
-        /* Stacks items vertically on smaller screens */
         max-width: 100%;
     }
 }
