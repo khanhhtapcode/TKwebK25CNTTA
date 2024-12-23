@@ -102,47 +102,41 @@
 
     <!-- Phần Combo -->
     <section class="combo-section">
-        <h1 data-aos="fade-right" data-aos-duration="1500">ĐẶT NGAY COMBO SIÊU TIẾT KIỆM</h1>
-        <h3 data-aos="fade-right" data-aos-duration="1500">COMBO SABAI HERITAGE</h3>
-        <!-- Combo khu vực TP. Hồ Chí Minh - Hà Nội -->
-        <div class="combo-group" data-aos="fade-left" data-aos-duration="1500">
+        <h1>ĐẶT NGAY COMBO SIÊU TIẾT KIỆM</h1>
+        <h3>COMBO SABAI HERITAGE</h3>
 
-            <div class="combo-list">
+        <div class="combo-group">
+            <div class="combo-item">
+                <h3>Combo khu vực TP. Hồ Chí Minh - Hà Nội</h3>
+                <img src="../Booking/images/MenuHN.jpg" alt="Combo HCM" class="zoomable" />
+                <h5>Combo PRIK - 599,000 VNĐ</h5>
+                <ul>
+                    <li>Gà chiên lá dứa chiên - 95,000đ</li>
+                    <li>Trứng chiên xốt me - 45,000đ</li>
+                    <li>Gỏi bò tái Thái - 70,000đ</li>
+                </ul>
+            </div>
 
-                <div class="combo-item">
-                    <h3>Combo khu vực TP. Hồ Chí Minh - Hà Nội</h3>
-                    <img src="/TKwebK25CNTTA-main/TKwebK25CNTTA-main/CodeWeb/Booking/images/menuHN.jpg"
-                        alt="Combo HCM" />
-                    <h5>Combo PRIK - 599,000 VNĐ</h5>
-                    <ul>
-                        <li>Gà chiên lá dứa chiên - 95,000đ</li>
-                        <li>Trứng chiên xốt me - 45,000đ</li>
-                        <li>Gỏi bò tái Thái - 70,000đ</li>
-                    </ul>
-                </div>
-
-                <div class="combo-item">
-                    <h3>Combo khu vực Đà Nẵng</h3>
-                    <img src="../Booking/images/menuDN.jpg" alt="Combo Đà Nẵng PRIK" />
-                    <h5>Combo PRIK - 499,000 VNĐ</h5>
-                    <ul>
-                        <li>Gà chiên lá dứa chiên - 39,000đ</li>
-                        <li>Pad Thái thập cẩm - 89,000đ</li>
-                        <li>Xôi xoài - 45,000đ</li>
-                    </ul>
-                </div>
+            <div class="combo-item">
+                <h3>Combo khu vực Đà Nẵng</h3>
+                <img src="../Booking/images/menuDN.jpg" alt="Combo Đà Nẵng PRIK" class="zoomable" />
+                <h5>Combo PRIK - 499,000 VNĐ</h5>
+                <ul>
+                    <li>Gà chiên lá dứa chiên - 39,000đ</li>
+                    <li>Pad Thái thập cẩm - 89,000đ</li>
+                    <li>Xôi xoài - 45,000đ</li>
+                </ul>
             </div>
         </div>
-        <!-- Phần chi nhánh áp dụng -->
-        <h3 data-aos="zoom-in-up" data-aos-duration="1500">Chi nhánh áp dụng</h3>
-        <div class="branch-locations" data-aos="fade-right" data-aos-duration="1500">
+
+        <h3>Chi nhánh áp dụng</h3>
+        <div class="branch-locations">
             <div class="branch-group">
                 <h4>TP. Hồ Chí Minh - Hà Nội</h4>
                 <ul>
                     <li>95 Cao Thắng, Quận 3, HCM</li>
                     <li>GigaMall Thủ Đức, HCM</li>
                     <li>AEON Mall Bình Tân, HCM</li>
-                    <!-- Thêm các chi nhánh khác -->
                 </ul>
             </div>
             <div class="branch-group">
@@ -154,9 +148,13 @@
                 </ul>
             </div>
         </div>
-
-        </div>
     </section>
+
+    <div class="overlay">
+        <div class="overlay-content">
+            <img src="" alt="Zoomed Image" id="zoomed-image">
+        </div>
+    </div>
     <section class="footer">
         <div class="footer-bg">
 
@@ -194,20 +192,7 @@
     <script>
         AOS.init();
     </script>
-    <script>
-        const booking_btn = document.getElementById('booking_btn');
-        const btn_close = document.getElementById('btn_close');
-        const modal_container = document.getElementById('modal_container');
-
-        booking_btn.addEventListener('click', () => {
-            modal_container.classList.add('show');
-        });
-
-        btn_close.addEventListener('click', () => {
-            modal_container.classList.remove('show');
-        });
-    </script>
-    <script src="/CodeWeb/scripts.js"></script>
+    <script src="../Booking/booking.js"></script>
 </body>
 
 </html>
