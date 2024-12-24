@@ -64,37 +64,33 @@ closeModalBtns.forEach(closeBtn => {
 
 // Đóng modal khi click bên ngoài modal
 window.addEventListener('click', (e) => {
-    const openModal = document.querySelector('.modal.show');
-    if (openModal && e.target === openModal) {
-        openModal.classList.remove('show');
-    }
-});
-
-
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
-        const targetId = this.getAttribute('href').substring(1); // Lấy id của phần cần cuộn tới
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth', // Cuộn mượt
-                block: 'start'
-            });
+    const openModals = document.querySelectorAll('.modal.show'); // Lấy tất cả các modal đang mở
+    openModals.forEach(openModal => {
+        if (e.target === openModal) {
+            openModal.classList.remove('show'); // Ẩn modal
         }
     });
 });
 
 
-document.querySelectorAll('.menu-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
 
-        window.scrollTo({
-            top: targetElement.offsetTop - 20, // Điều chỉnh khoảng cách
-            behavior: 'smooth'
-        });
+// Thêm sự kiện click cho các mục trong menu điều hướng
+document.querySelectorAll('.header nav a').forEach(navItem => {
+    navItem.addEventListener('click', (e) => {
+        const targetHref = navItem.getAttribute('href');
+
+        // Nếu href bắt đầu bằng "#", xử lý cuộn đến phần tử tương ứng
+        if (targetHref.startsWith('#')) {
+            e.preventDefault(); // Ngăn chặn hành vi mặc định
+            const targetId = targetHref.substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
     });
 });
