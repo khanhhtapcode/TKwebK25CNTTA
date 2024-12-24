@@ -17,7 +17,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../CodeWeb/images/back-sign.webp') no-repeat center center fixed;
+    background: url('../images/back-sign.webp') no-repeat center center fixed;
     /* Đặt ảnh nền */
     background-size: cover;
     /* Để ảnh nền bao phủ toàn trang */
