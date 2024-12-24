@@ -94,3 +94,4 @@ document.querySelectorAll('.header nav a').forEach(navItem => {
         }
     });
 });
+
