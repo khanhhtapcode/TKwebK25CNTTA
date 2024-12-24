@@ -630,7 +630,7 @@ h2 {
 
 .footer {
     background-image: url(../images/footer.jpg);
-    padding-top: 100px;
+    padding-top: 80px;
     padding-right: 80px;
     background-position: center;
     background-repeat: no-repeat;
@@ -716,7 +716,6 @@ h2 {
 
 .contact-trigger {
     background-color: #007bff;
-    /* Màu nền */
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
