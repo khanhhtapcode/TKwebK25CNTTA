@@ -229,7 +229,7 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url("images/img_5309__1__d77729152cb74bcca29e3ff2f10caa3b_master.jpg");
+    background-image: url("../images/img_5309__1__d77729152cb74bcca29e3ff2f10caa3b_master.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -345,7 +345,7 @@ a {
     width: 100%;
     background-color: #f6de9f;
     font-family: "Playfair Display", Sans-serif;
-    background-image: url(/TKwebK25CNTTA-main/TKwebK25CNTTA-main/CodeWeb/images/background-all.png);
+    background-image: url(../images/background-all.png);
     background-size: cover;
 }
 
@@ -482,7 +482,7 @@ a {
 .review {
     width: 100%;
     padding: 100px 0;
-    background-image: url(/TKwebK25CNTTA-main/TKwebK25CNTTA-main/CodeWeb/images/back-review.webp);
+    background-image: url(../images/back-review.webp);
 }
 
 .review-item {
@@ -577,7 +577,7 @@ h2 {
 /* --------------------Team bếp let him cook------------------------------------------ */
 
 .team {
-    background-image: url(images/background-all.png);
+    background-image: url(../images/background-all.png);
 }
 
 .team-items {
