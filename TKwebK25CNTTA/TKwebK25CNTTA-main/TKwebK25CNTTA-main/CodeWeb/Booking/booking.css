@@ -235,8 +235,6 @@ body {
 }
 
 
-
-
 .combo-section {
     padding: 20px;
     background-color: #abe8a0;
@@ -260,7 +258,7 @@ body {
 
 /* General overlay styles */
 .overlay {
-    position: fixed;
+    position: ;
     top: 0;
     left: 0;
     width: 100%;
@@ -295,8 +293,8 @@ body {
     padding: 20px; /* Padding tùy chọn cho nội dung */
     border-radius: 10px; /* Bo tròn các góc */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ */
-    max-width: 80%; 
-    max-height: 80%; 
+    max-width: 100%; 
+    max-height: 100%; 
     overflow: auto; /* Đảm bảo cuộn khi nội dung tràn ra ngoài */
 }
 
@@ -523,16 +521,16 @@ body {
 
 #modal p, #modal label {
     font-size: 15px;
-    margin-bottom: 10px; /* Space below text and labels */
+    margin-bottom: 10px; 
 }
 
 #modal input, #modal select {
-    width: 100%; /* Full width for input fields */
+    width: 100%; 
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
     font-size: 16px;
 }
 
@@ -542,8 +540,8 @@ button#button_close {
     border: none;
     background: none;
     font-size: 20px;
-    color: #333; /* Color for close button */
-    cursor: pointer; /* Pointer cursor for button */
+    color: #333; 
+    cursor: pointer; 
     position: absolute;
     top: 10px;
     right: 10px;
@@ -662,9 +660,9 @@ h1 {
     padding: 20px;
     text-align: center;
 }
-.thucdon:hover{
+/* .thucdon:hover{
     transform: skewY(2deg);
-}
+} */
 .thucdon img {
     max-width: 100%;
     height: auto;
