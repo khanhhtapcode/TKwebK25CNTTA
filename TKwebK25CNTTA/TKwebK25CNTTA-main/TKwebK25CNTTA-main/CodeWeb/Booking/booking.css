@@ -806,3 +806,151 @@ button#button_close {
     font-family: "Playfair Display", Sans-serif;
     margin-bottom: 10px;
 }
+
+
+/* Áp dụng nền hình ảnh cho phần khám phá */
+/* Áp dụng nền hình ảnh cho phần khám phá */
+.content-khampha {
+    background-image: url(../images/background-all.png); /* Hình nền */
+    background-size: cover; /* Hình nền phủ toàn bộ */
+    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    background-position: center; /* Hình nền căn giữa */
+    padding: 50px 0; /* Khoảng cách trên dưới */
+}
+
+/* Container chính */
+.container {
+    max-width: 1200px; /* Độ rộng tối đa */
+    margin: 0 auto; /* Căn giữa container */
+    padding: 20px; /* Khoảng cách nội dung bên trong */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+}
+
+/* Dòng tiêu đề */
+.row.justify-content h1 {
+    color: var(--sub-color); /* Màu chữ */
+    font-family: "Playfair Display", serif; /* Phông chữ */
+    font-size: 60px; /* Kích thước chữ */
+    font-weight: 500; /* Độ đậm chữ */
+    line-height: 1.4em; /* Khoảng cách dòng */
+    text-align: center; /* Căn giữa chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    justify-content: center;
+}
+
+.row.justify-content h3 {
+    color: var(--sub-color); /* Màu chữ */
+    font-family: "Playfair Display", serif; /* Phông chữ */
+    font-size: 20px; /* Kích thước nhỏ hơn */
+    font-weight: 500; /* Độ đậm vừa phải */
+    line-height: 1.4em; /* Khoảng cách dòng */
+    text-align: left; /* Căn giữa chữ */
+    margin-top: 5px; /* Khoảng cách trên */
+}
+
+/* Phần chính của khám phá */
+
+/* Item khám phá */
+.khampha-item {
+    display: flex; /* Flexbox để sắp xếp theo hàng */
+    flex-direction: row; /* Sắp xếp các item nằm ngang */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+    align-items: center; /* Căn giữa theo trục dọc */
+    margin-top: 5px; /* Khoảng cách trên */
+    text-align: center;
+}
+
+/* Văn bản trong item */
+.khampha-text h2 {
+    color: var(--sub-color);
+    font-size: 33px; 
+    font-weight: bold;
+    line-height: 1.6em; 
+    margin-bottom: 5px; 
+    font-family: "Playfair Display", Sans-serif;
+}
+
+.khampha-text p {
+    color: #555; /* Màu chữ nhẹ hơn */
+    font-size: 18px; /* Kích thước chữ */
+    line-height: 1.8em; /* Khoảng cách dòng lớn hơn */
+    text-align: center; /* Canh đều văn bản */
+    font-family: "Fira Sans", Sans-serif;
+}
+
+/* Hình ảnh trong item */
+.khampha-image img {
+    max-width: 300px; /* Kích thước tối đa */
+    height: auto; /* Tự điều chỉnh chiều cao */
+    border-radius: 10px; /* Bo góc hình ảnh */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng nhẹ */
+    transition: all 0.3s ease-in; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.khampha-image img:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.0); 
+}
+
+.second-image img {
+    display: block; 
+    padding-top: 15px;
+    width: 100vh; 
+    height: auto; 
+    border: none; /* Bỏ đường viền */
+    border-radius: 5px; /* Không bo góc */
+    box-shadow: none; /* Không hiệu ứng bóng */
+    object-fit: cover; /* Bảo đảm hình ảnh bao phủ toàn bộ */
+}
+
+.khampha-item2 {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử theo hàng ngang */
+    align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+}
+
+.khampha-item2 {
+    display: flex; /* Sắp xếp các phần tử theo hàng ngang */
+    align-items: flex-start; /* Canh các phần tử ở phía trên cùng */
+    justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
+    gap: 20px; /* Khoảng cách giữa văn bản và hình ảnh */
+    margin-bottom: 20px; /* Khoảng cách giữa các mục */
+}
+
+.khampha-text2 {
+    flex: 1; /* Phần văn bản chiếm một phần không gian */
+    padding: 20px; /* Khoảng cách giữa viền ngoài và nội dung văn bản */
+}
+
+.khampha-image2 {
+    flex: 1; /* Hình ảnh chiếm một phần không gian */
+    display: flex;
+    justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+    align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+}
+
+.khampha-image2 img {
+    width: 700px;
+    height: auto; /* Duy trì tỷ lệ khung hình của ảnh */
+    border-radius: 10px; /* Bo tròn nhẹ các góc hình ảnh */
+}
+
+.khampha-text2 h2 {
+    color: var(--sub-color);
+    font-size: 33px; 
+    font-weight: bold;
+    line-height: 1.6em; 
+    margin-bottom: 5px; 
+    font-family: "Playfair Display", Sans-serif;
+}
+
+.khampha-text2 p {
+    color: #555; /* Màu chữ nhẹ hơn */
+    font-size: 18px; /* Kích thước chữ */
+    line-height: 1.8em; /* Khoảng cách dòng lớn hơn */
+    text-align: center; /* Canh đều văn bản */
+    font-family: "Fira Sans", Sans-serif;
+}
+
+
+
