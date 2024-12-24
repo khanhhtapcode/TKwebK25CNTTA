@@ -13,18 +13,27 @@
 
 <body>
     <!-- Phần đầu trang -->
-    <header class="header">
-        <img src="../images/TMKLogo2020Xanh.png" alt="Thai Market Logo" height="50" width="100" />
-        <nav data-aos="zoom-in-up" data-aos-duration="1500">
-            <a href="#">Giới thiệu</a>
-            <a href="../Thuc-don/thucdon.html">Thực đơn</a>
-            <a href="#">Khám phá</a>
-            <a href="#">Khuyến Mãi</a>
-        </nav>
+    <section class="top active">
+        <header class="header">
+            <img src="../images/TMKLogo2020Xanh.png" alt="Thai Market Logo" height="50" width="100">
+            <nav data-aos="zoom-in-up" data-aos-duration="1500">
+                <a href="../Trangchu/index.html">Trang chủ</a>
+                <a href="#khuyenmai" style="--x:1;">Khuyến Mãi</a>
+                <a href="#thucdon" style="--x:2;">Thực đơn</a>
+                <a href="#khampha" style="--x:3;">Khám phá</a>
 
-        <button id="booking_btn" data-aos="zoom-in-up" data-aos-duration="1500"><i class="fas fa-book"></i> Đặt
-            bàn</button>
-    </header>
+            </nav>
+            <div class="btn-container">
+                <button id="booking_btn" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <i class="fas fa-book"></i> Đặt bàn
+                </button>
+                <a href="../Sign-up-in/sign-in.html" class="button" data-aos="zoom-in-up" data-aos-duration="1500"
+                    id="booking_btn">
+                    <i class="fas fa-sign-in-alt"></i> Đăng Nhập
+                </a>
+            </div>
+        </header>
+    </section>
     <div id="modal_container">
         <div id="modal">
             <div class="modal-header">
@@ -68,8 +77,9 @@
     </section>
 
     <!-- Nội dung chính -->
-    <section class="content">
+    <section class="content" id="khuyenmai">
         <div class="note">
+            <h2>Khuyến Mãi</h2>
             <p><em>*Khách hàng cần đặt bàn trước ít nhất 01 tiếng so với thời gian dự định tới nhà hàng, và thời gian
                     thực tế tới nhà hàng chênh lệch không quá 20 phút so với thời gian theo thông tin đặt bàn, để được
                     áp dụng ưu đãi và phục vụ tốt nhất.</em></p>
@@ -150,11 +160,153 @@
         </div>
     </section>
 
+
+
+    <!--  -->
+    <div class="main-content" id="thucdon">
+        <h1 data-aos="fade-down" data-aos-duration="1500">Thực đơn 3 miền của Thai Market</h1>
+        <div class="content-items" data-aos="fade-up" data-aos-duration="1500">
+            <span id="mien-bac">Miền Bắc</span>
+            <span id="mien-nam">Miền Nam</span>
+        </div>
+        <div class="thucdon-info" data-aos="fade-right" data-aos-duration="1500">
+            <div class="thucdon" id="mien-bac-info">
+                <h2>Thai Market Restaurant-Trung Hòa, Hà Nội</h2>
+                <p>112 P.Trung Hòa, Hà Nội - 1900 0207</p>
+                <img src="../Booking/images/hanpoi.webp" alt="Thai Market Restaurant 95 Cao Thắng">
+                <button class="btn" id="mien-nam">Xem thực đơn</button>
+
+                <!-- phan menu flipbook -->
+                <div id="flipbook-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <span id="close-modal" class="close">&times;</span>
+                        <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe"
+                            src="https://heyzine.com/flip-book/f3491c7c12.html"
+                            style="border: 1px solid lightgray; width: 100%; height: 600px;"></iframe>
+                    </div>
+
+                </div>
+                <button class="btn"><a
+                        href="https://www.google.com/maps/place/Nh%C3%A0+H%C3%A0ng+Th%C3%A1i,+Qu%C3%A1n+%C4%82n+Th%C3%A1i,+%C4%90%E1%BB%93+%C4%82n+Th%C3%A1i+Lan+-+Thai+Market+Restaurant+-+Cao+Th%E1%BA%AFng/@10.7719091,106.679882,17z/data=!4m6!3m5!1s0x31752f1349a504b7:0xfc5c26ab2906b026!8m2!3d10.7723613!4d106.6791442!16s%2Fg%2F11pkc6s6x7?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D"
+                        target="_blank" rel="noopenner">Xem địa điểm</a></button>
+            </div>
+
+            <div class="thucdon" id="mien-nam-info">
+                <h2>Thai Market Restaurant - Tầng 4, Giga Mall Thủ Đức</h2>
+                <p>Thủ Đức - 0283 5358 646</p>
+                <img src="../Booking/images/hochiminh.webp" alt="Thai Market Restaurant Giga Mall">
+                <button class="btn" id="mien-nam2">Xem thực đơn</button>
+                <!-- phan menu flipbook -->
+                <div id="flipbook-modal2" class="modal hidden">
+                    <div class="modal-content">
+                        <span id="close-modal" class="close">&times;</span>
+
+                        <iframe allowfullscreen="" scrolling="no" class="fp-iframe"
+                            style="border: 1px solid lightgray; width: 100%; height: 600px;"
+                            src="https://heyzine.com/flip-book/b591dd6138.html"></iframe>
+                    </div>
+
+                </div>
+                <button class="btn"><a
+                        href="https://www.google.com/maps/place/Thai+Market+Restaurant+GigaMall+Th%E1%BB%A7+%C4%90%E1%BB%A9c/@10.8283169,106.7221278,17z/data=!3m1!4b1!4m6!3m5!1s0x317529f408139a4b:0xe7483fdc2a55d0a5!8m2!3d10.8283169!4d106.7221278!16s%2Fg%2F11s78r8f0d?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D"
+                        rel="noopenner" target="_blank">Xem
+                        địa điểm</a></button>
+            </div>
+
+            <div class="thucdon" id="mien-bac-info">
+                <h2>Thai Market Restaurant - Tầng 3, AEON Mall Bình Tân</h2>
+                <p>Bình Tân - 0283 5355 401</p>
+                <img src="../Booking/images/hochiminh2.webp" alt="Thai Market Restaurant 95 Cao Thắng">
+                <button class="btn" id="mien-nam3">Xem thực đơn</button>
+                <div id="flipbook-modal3" class="modal hidden">
+                    <div class="modal-content">
+                        <span id="close-modal" class="close">&times;</span>
+                        <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe"
+                            src="https://heyzine.com/flip-book/9290913908.html"
+                            style="border: 1px solid lightgray; width: 100%; height: 600px;"></iframe>
+                    </div>
+
+                </div>
+                <button class="btn"><a
+                        href="https://www.google.com/maps/place/%C3%86ON+MALL+B%C3%ACnh+T%C3%A2n/@10.7430164,106.6098411,17z/data=!4m7!3m6!1s0x31752dcece7b50db:0xf53f7643a9134531!8m2!3d10.7427497!4d106.6119309!15sCiRBRU9OIE1hbGwgQsOsbmggVMOibiwgSOG7kyBDaMOtIE1pbmgiA4gBAVolIiNhZW9uIG1hbGwgYsOsbmggdMOibiBo4buTIGNow60gbWluaJIBD3Nob3BwaW5nX2NlbnRlcpoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VNd2Vrb3pSRTFCRUFF4AEA!16s%2Fg%2F11bzz3y7bz?shorturl=1"
+                        rel="noopenner" target="_blank">Xem
+                        địa điểm</a></button>
+            </div>
+
+            <div class="thucdon" id="mien-bac-info">
+                <h2>Thai Market Restaurant - 219 Phan Xích Long</h2>
+                <p>Phú Nhuận - 1900 02 07</p>
+                <img src="../Booking/images/hochiminh3.webp" alt="Thai Market Restaurant 95 Cao Thắng">
+                <button class="btn" id="mien-nam4">Xem thực đơn</button>
+                <div id="flipbook-modal4" class="modal hidden">
+                    <div class="modal-content">
+                        <span id="close-modal" class="close">&times;</span>
+                        <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe"
+                            src="https://heyzine.com/flip-book/9290913908.html"
+                            style="border: 1px solid lightgray; width: 100%; height: 600px;"></iframe>
+                    </div>
+
+                </div>
+                <button class="btn"><a
+                        href="https://www.google.com/maps/place/Nh%C3%A0+H%C3%A0ng+%C4%90%E1%BB%93+%C4%82n+Th%C3%A1i+-+Thai+Market+Restaurant+-+Phan+X%C3%ADch+Long/@10.7988456,106.6840433,17z/data=!4m6!3m5!1s0x317529cae64c3bc9:0x93b8cbcacf0d1d9c!8m2!3d10.7988403!4d106.6866182!16s%2Fg%2F11v60qh43q?entry=tts"
+                        rel="noopenner" target="_blank">Xem
+                        địa điểm</a></button>
+            </div>
+        </div>
+    </div>
     <div class="overlay">
         <div class="overlay-content">
             <img src="" alt="Zoomed Image" id="zoomed-image">
         </div>
     </div>
+    <!--------------------------------------- Khám phá -------------------------------------------------------->
+    <section id="khampha" class="content-khampha">
+        <div class="container" data-aos="fade-down" data-aos-duration="1500">
+            <div class="row justify-content">
+                <h1>Hành trình ẩm thực cùng Thai Market</h1>
+                <h3>Ẩm thực là trái tim của văn hóa Thái Lan, thể hiện sự hiếu khách và lòng nhiệt thành.</h3>
+            </div>
+            <div class="main-khampha">
+                <div class="khampha-item">
+                    <div class="khampha-text">
+                        <h2>"Thử một miếng gỏi đu đủ này đi, đảm bảo ngon tuyệt!" là lời mời thân thiện nhất để bắt đầu
+                            một
+                            bữa ăn
+                            Thái!</h2>
+                        <p>Một đĩa gỏi đu đủ chuẩn vị Thái Lan được tạo nên từ ba yếu tố tuyệt vời: sự tươi ngon từ
+                            những
+                            nguyên
+                            liệu được chọn lọc kỹ càng, sự hòa quyện tinh tế của các loại gia vị đặc trưng xứ Chùa Vàng,
+                            và
+                            kỹ thuật
+                            giã vừa đủ lực của người đầu bếp dồn cả tâm huyết vào từng thao tác nhỏ nhất. Mỗi miếng gỏi
+                            không chỉ là
+                            món ăn, mà còn là tinh hoa văn hóa ẩm thực Thái được gửi gắm trọn vẹn.</p>
+                    </div>
+                    <div class="khampha-image">
+                        <img src="../images/banner-kham-pha.webp" alt="">
+                    </div>
+                </div>
+                <div class="khampha-item2">
+                    <div class="khampha-text2">
+                        <h2>Những tư vị quyến rũ từ vùng trồng gia vị nổi tiếng</h2>
+                        <p>Người Thái giữ lại hương vị trọn vẹn của từng loại gia vị bằng phương pháp giã thủ công
+                            truyền thống cần mẫn và tinh tế. Từ những vùng trồng gia vị nổi tiếng nhất tại Chiang Mai,
+                            Thai Market mong muốn truyền tải nghệ thuật ẩm thực Thái nguyên bản bằng sự kỹ lưỡng trong
+                            tuyển chọn, đậm đà trong phối trộn và chuẩn Thái trong từng chi tiết dù là nhỏ nhất.
+                        </p>
+                    </div>
+                    <div class="khampha-image2">
+                        <img src="../images/banner-kham-pha5-2 (1).webp" alt="">
+                    </div>
+                    <!-- <div class="second-image">
+                        <img src="../images/banner-kham-pha-hero.webp" alt="">
+                    </div> -->
+                </div>
+
+    </section>
+
+    <!------------------------------------------------------------ Footer-------------------------------------------------------------------->
     <section class="footer">
         <div class="footer-bg">
 
