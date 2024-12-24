@@ -117,13 +117,15 @@ body {
     position: relative;
 }
 
-.main-image .title {
+.main-image .title h1 {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 48px;
+    top: 300px;
+    left: 830px;
+    color: white;
+    font-size: 50px;
     font-weight: bold;
+    justify-content: center;
+    font-family: "Playfair Display", Sans-serif;
 }
 
 .content {
@@ -194,7 +196,10 @@ body {
 .combo-group {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding-right: 20px;
+    display: flex; /* Đảm bảo các phần tử nằm trên cùng một hàng */
+    justify-content: space-between; /* Đảm bảo khoảng cách giữa các phần tử đều */
+    align-items: center; /* Căn giữa theo chiều dọc */
 }
 
 .combo-list {
@@ -205,15 +210,14 @@ body {
 }
 
 .combo-item {
-    flex: calc(100/2); /* Điều chỉnh tỷ lệ phần tử, cho phép các phần tử chiếm 30% bề rộng */
-    max-width: 80%; /* Giới hạn chiều rộng tối đa của mỗi phần tử */
+    flex: 1; /* Điều chỉnh tỷ lệ phần tử để các phần tử có thể chia đều không gian */
+    max-width: 100%; /* Giới hạn tỷ lệ chiều rộng của mỗi phần tử */
     background-color: #f9f0c1;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
     align-items: center;
     border-radius: 8px;
-    margin: 10px;
+    margin: 20px;
     transition: all 0.3s ease;
 }
 .combo-item h3{
@@ -231,12 +235,6 @@ body {
 
 
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .combo-section {
     padding: 20px;
@@ -244,12 +242,12 @@ body {
 }
 
 .combo-item {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .combo-item img {
-    width: 100px;
+    width: 200px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -413,7 +411,7 @@ body {
 
 .footer {
     background-image: url(../images/footer.jpg);
-    padding-top: 100px;
+    padding-top: 80px;
     padding-right: 80px;
     background-position: center;
     background-repeat: no-repeat;
@@ -423,16 +421,6 @@ body {
     position: relative;
 }
 
-/* .footer::before{
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    top: 0;
-    opacity: 0.4;
-    z-index: 1;
-} */
 .footer h2 {
     color: var(--text-color);
     font-size: 25px;
@@ -560,15 +548,6 @@ button#button_close {
     right: 10px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .combo-item {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
-
 .main-content {
     width: 100%;
     height: 100%;
@@ -682,18 +661,20 @@ h1 {
     padding: 20px;
     text-align: center;
 }
-
+.thucdon:hover{
+    transform: skewY(2deg);
+}
 .thucdon img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-h2 {
+.thucdon h2 {
     font-size: 20px;
     color: #333;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 p {
@@ -811,13 +792,19 @@ button#button_close {
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
 }
+.thucdon-info{
+    align-items: center;
+    padding: auto;
+}
+.thucdon-info img{
+    transition: all .3s ease;
+}
 .thucdon-info h2{
     font-size: 18px;
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
     margin-bottom: 10px;
 }
-
 .thucdon-info p{
     font-size: 15px;
     color: var(--sub-color);
@@ -825,9 +812,12 @@ button#button_close {
     margin-bottom: 10px;
 }
 
+.thucdon-info img:hover{
+    transform: translateY(-8%);
+}
 
 /* Áp dụng nền hình ảnh cho phần khám phá */
-/* Áp dụng nền hình ảnh cho phần khám phá */
+
 .content-khampha {
     background-image: url(../images/background-all.png); /* Hình nền */
     background-size: cover; /* Hình nền phủ toàn bộ */
@@ -899,7 +889,7 @@ button#button_close {
 
 /* Hình ảnh trong item */
 .khampha-image img {
-    max-width: 300px; /* Kích thước tối đa */
+    width: 250px; /* Kích thước tối đa */
     height: auto; /* Tự điều chỉnh chiều cao */
     border-radius: 10px; /* Bo góc hình ảnh */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng nhẹ */
@@ -911,16 +901,6 @@ button#button_close {
     filter: brightness(1.0); 
 }
 
-.second-image img {
-    display: block; 
-    padding-top: 15px;
-    width: 100vh; 
-    height: auto; 
-    border: none; /* Bỏ đường viền */
-    border-radius: 5px; /* Không bo góc */
-    box-shadow: none; /* Không hiệu ứng bóng */
-    object-fit: cover; /* Bảo đảm hình ảnh bao phủ toàn bộ */
-}
 
 .khampha-item2 {
     display: flex; /* Sử dụng flexbox để sắp xếp các phần tử theo hàng ngang */
@@ -932,7 +912,7 @@ button#button_close {
     align-items: flex-start; /* Canh các phần tử ở phía trên cùng */
     justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
     gap: 20px; /* Khoảng cách giữa văn bản và hình ảnh */
-    margin-bottom: 20px; /* Khoảng cách giữa các mục */
+    margin-bottom: 5px; /* Khoảng cách giữa các mục */
 }
 
 .khampha-text2 {
@@ -964,7 +944,7 @@ button#button_close {
 
 .khampha-text2 p {
     color: #555; /* Màu chữ nhẹ hơn */
-    font-size: 18px; /* Kích thước chữ */
+    font-size: 17px; /* Kích thước chữ */
     line-height: 1.8em; /* Khoảng cách dòng lớn hơn */
     text-align: center; /* Canh đều văn bản */
     font-family: "Fira Sans", Sans-serif;
