@@ -8,8 +8,8 @@ body{
     background-image: url("../Thanhtoan.html/background.jpg");
 }
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 1000px;
+    margin: 200px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,9 +26,11 @@ h1 {
 .form-group {
     margin: 15px 50px;
 }
+
+
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin: 5px;
     font-weight: bold;
 }
 .form-group input, .form-group select {
