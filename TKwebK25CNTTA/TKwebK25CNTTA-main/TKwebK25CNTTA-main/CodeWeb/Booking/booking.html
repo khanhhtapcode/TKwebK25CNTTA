@@ -13,25 +13,27 @@
 
 <body>
     <!-- Phần đầu trang -->
-    <header class="header">
-        <img src="../images/TMKLogo2020Xanh.png" alt="Thai Market Logo" height="50" width="100">
-        <nav data-aos="zoom-in-up" data-aos-duration="1500">
-            <a href="../Trangchu/index.html">Trang chủ</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#thucdon" style="--x:1;">Thực đơn</a>
-            <a href="#khampha" style="--x:2;">Khám phá</a>
-            <a href="#">Khuyến Mãi</a>
-        </nav>
-        <div class="btn-container">\
-            <button id="booking_btn" data-aos="zoom-in-up" data-aos-duration="1500">
-                <i class="fas fa-book"></i> Đặt bàn
-            </button>
-            <a href="../Sign-up-in/sign-in.html" class="button" data-aos="zoom-in-up" data-aos-duration="1500"
-                id="booking_btn">
-                <i class="fas fa-sign-in-alt"></i> Đăng Nhập
-            </a>
-        </div>
-    </header>
+    <section class="top active">
+        <header class="header">
+            <img src="../images/TMKLogo2020Xanh.png" alt="Thai Market Logo" height="50" width="100">
+            <nav data-aos="zoom-in-up" data-aos-duration="1500">
+                <a href="../Trangchu/index.html">Trang chủ</a>
+                <a href="#khuyenmai" style="--x:1;">Khuyến Mãi</a>
+                <a href="#thucdon" style="--x:2;">Thực đơn</a>
+                <a href="#khampha" style="--x:3;">Khám phá</a>
+
+            </nav>
+            <div class="btn-container">
+                <button id="booking_btn" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <i class="fas fa-book"></i> Đặt bàn
+                </button>
+                <a href="../Sign-up-in/sign-in.html" class="button" data-aos="zoom-in-up" data-aos-duration="1500"
+                    id="booking_btn">
+                    <i class="fas fa-sign-in-alt"></i> Đăng Nhập
+                </a>
+            </div>
+        </header>
+    </section>
     <div id="modal_container">
         <div id="modal">
             <div class="modal-header">
@@ -75,8 +77,9 @@
     </section>
 
     <!-- Nội dung chính -->
-    <section class="content">
+    <section class="content" id="khuyenmai">
         <div class="note">
+            <h2>Khuyến Mãi</h2>
             <p><em>*Khách hàng cần đặt bàn trước ít nhất 01 tiếng so với thời gian dự định tới nhà hàng, và thời gian
                     thực tế tới nhà hàng chênh lệch không quá 20 phút so với thời gian theo thông tin đặt bàn, để được
                     áp dụng ưu đãi và phục vụ tốt nhất.</em></p>
