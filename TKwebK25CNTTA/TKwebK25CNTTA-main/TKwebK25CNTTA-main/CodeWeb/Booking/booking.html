@@ -14,20 +14,23 @@
 <body>
     <!-- Phần đầu trang -->
     <header class="header">
-        <img src="../images/TMKLogo2020Xanh.png" alt="Thai Market Logo" height="50" width="100" />
+        <img src="../images/TMKLogo2020Xanh.png" alt="Thai Market Logo" height="50" width="100">
         <nav data-aos="zoom-in-up" data-aos-duration="1500">
             <a href="../Trangchu/index.html">Trang chủ</a>
             <a href="#">Giới thiệu</a>
-            <a href="#thudon" style="--x:1;">Thực đơn</a>
-            <a href="#">Khám phá</a>
+            <a href="#thucdon" style="--x:1;">Thực đơn</a>
+            <a href="#khampha" style="--x:2;">Khám phá</a>
             <a href="#">Khuyến Mãi</a>
         </nav>
-        <button class="btn-action" data-aos="zoom-in-up" data-aos-duration="1500">
-            <i class="fas fa-book"></i> Đặt bàn
-        </button>
-        <button class="btn-action" data-aos="zoom-in-up" data-aos-duration="1500">
-            <i class="fas fa-sign-in-alt"></i> Đăng nhập
-        </button>
+        <div class="btn-container">\
+            <button id="booking_btn" data-aos="zoom-in-up" data-aos-duration="1500">
+                <i class="fas fa-book"></i> Đặt bàn
+            </button>
+            <a href="../Sign-up-in/sign-in.html" class="button" data-aos="zoom-in-up" data-aos-duration="1500"
+                id="booking_btn">
+                <i class="fas fa-sign-in-alt"></i> Đăng Nhập
+            </a>
+        </div>
     </header>
     <div id="modal_container">
         <div id="modal">
@@ -254,7 +257,7 @@
         </div>
     </div>
     <!--------------------------------------- Khám phá -------------------------------------------------------->
-    <section class="content-khampha">
+    <section id="khampha" class="content-khampha">
         <div class="container" data-aos="fade-down" data-aos-duration="1500">
             <div class="row justify-content">
                 <h1>Hành trình ẩm thực cùng Thai Market</h1>
