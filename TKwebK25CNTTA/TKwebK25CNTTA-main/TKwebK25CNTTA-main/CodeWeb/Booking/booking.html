@@ -443,6 +443,26 @@
     <script>
         AOS.init();
     </script>
+    <button id="backToTop" style="display: block;">↑</button>
+    <script>
+        
+      const backToTopButton = document.getElementById('backToTop');
+      // Hiển thị nút khi cuộn xuống
+      window.onscroll = function () {
+          if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+              backToTopButton.style.display = "block";
+          } else {
+              backToTopButton.style.display = "none";
+          }
+      };
+      backToTopButton.onclick = function () {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth' 
+          });
+      };
+  
+    </script>
     <script src="../Booking/booking.js"></script>
 </body>
 
