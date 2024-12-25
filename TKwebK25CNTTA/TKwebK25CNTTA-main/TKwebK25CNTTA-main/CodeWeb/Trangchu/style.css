@@ -189,7 +189,7 @@ a {
 
 .menu-items {
     position: fixed;
-    width: 300px;
+    width: 310px;
     height: 100vh;
     background-color: var(--main-color);
     right: 0;
@@ -762,5 +762,105 @@ h2 {
         /* Trở về vị trí bình thường */
         opacity: 1;
         /* Hiện hoàn toàn */
+    }
+}
+
+
+/*------------------------------- responsive----------------------------------- */
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width:768px) {
+    .menu-title .menu-button {
+        font-size: 22px;
+    }
+
+    .food-items {
+        width: calc(100% / 2);
+        padding: 10px;
+    }
+
+    .review-item {
+        width: calc(100% / 2 - 20px);
+        margin: 10px;
+    }
+
+    .team-items {
+        width: calc(100% / 2);
+    }
+
+    .big-image .big-image-content h2 {
+        font-size: 36px;
+    }
+
+    .big-image .big-image-content p {
+        font-size: 16px;
+    }
+    .team-section {
+        padding: 40px 15px; /* Giảm padding cho tablet */
+    }
+
+    .team-items {
+        width: calc(100% / 2 - 20px); /* Chuyển về 2 cột */
+    }
+}
+
+/*---------------------------------- Mobile (dưới 768px)----------------------------------------- */
+@media (max-width: 768px) {
+    .menu-title .menu-button {
+        font-size: 20px;
+    }
+
+    .food-items {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .review-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .team-items {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .big-image .big-image-content h2 {
+        font-size: 28px;
+    }
+
+    .big-image .big-image-content p {
+        font-size: 14px;
+    }
+
+    .about-item {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .float-contact {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .contact-icons {
+        right: 0;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .team-section {
+        padding: 30px 10px; /* Giảm thêm padding cho mobile */
+    }
+
+    .team-items {
+        width: 100%; /* 1 cột cho mobile */
+        margin: 10px 0; /* Khoảng cách trên và dưới */
     }
 }

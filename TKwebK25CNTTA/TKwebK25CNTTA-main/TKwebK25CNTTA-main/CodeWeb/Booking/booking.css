@@ -410,7 +410,7 @@ body {
 
 .footer {
     background-image: url(../images/footer.jpg);
-    padding-top: 80px;
+    padding-top: 50px;
     padding-right: 80px;
     background-position: center;
     background-repeat: no-repeat;
@@ -949,5 +949,204 @@ button#button_close {
     font-family: "Fira Sans", Sans-serif;
 }
 
+/*-------------------------------- Responsive ---------------------------------------------------*/
+/* Responsive styles */
+
+/* Tablet: màn hình có chiều rộng từ 768px đến 1024px */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .main-image .title h1 {
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .combo-group {
+        flex-direction: column;
+        padding: 20px;
+    }
+    #booking_btn, .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .modal-content {
+        width: 90%;
+    }
+
+    .flipbook {
+        width: 90%;
+        height: 70%;
+    }
+    .combo-item {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .branch-locations {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer h2 {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+}
+
+/* Mobile: màn hình có chiều rộng nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #booking_btn, .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .flipbook {
+        width: 95%;
+        height: 60%;
+    }
+    .content-khampha .main-khampha {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .khampha-item, .khampha-item2 {
+        width: 100%;
+    }
+
+    .khampha-item .khampha-text, .khampha-item2 .khampha-text2 {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .khampha-item img, .khampha-item2 img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Cải thiện việc hiển thị modal */
+    .modal {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal.show {
+        display: flex;
+    }
+
+    .main-image {
+        height: 500px;
+    }
+
+    .main-image .title h1 {
+        font-size: 28px;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .combo-item {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    .combo-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .branch-group {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer h2 {
+        font-size: 18px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+    .content-khampha {
+        padding: 20px 10px;
+    }
+
+    .khampha-item .khampha-text, .khampha-item2 .khampha-text2 {
+        font-size: 14px;
+    }
+
+    .khampha-item img, .khampha-item2 img {
+        width: 100%;
+    }
+}
 
 
