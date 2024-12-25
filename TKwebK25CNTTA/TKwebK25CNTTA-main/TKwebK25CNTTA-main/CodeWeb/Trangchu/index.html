@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row">
                 <div class="section-title" data-aos="fade-right">
-                    <h2 data-title="OUR STORY">ABOUT US</h2>
+                    <h2 data-title="OUR STORY"></h2>
                 </div>
             </div>
             <div class="row">
@@ -537,6 +537,27 @@
                 chatBox.innerHTML += `<p><strong>Chatbot:</strong> Lỗi khi kết nối tới API.</p>`;
                         }
                          }                        
+    </script>
+    
+    <button id="backToTop" style="display: block;">↑</button>
+    <script>
+        
+      const backToTopButton = document.getElementById('backToTop');
+      // Hiển thị nút khi cuộn xuống
+      window.onscroll = function () {
+          if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+              backToTopButton.style.display = "block";
+          } else {
+              backToTopButton.style.display = "none";
+          }
+      };
+      backToTopButton.onclick = function () {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth' 
+          });
+      };
+  
     </script>
     <script src=" scripts.js "></script>
 </body>

@@ -336,6 +336,7 @@ a {
     font-size: 30px;
     color: var(--text-color);
     text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0.5, 0.5);
 }
 
 .section-title h2::before {
@@ -835,3 +836,21 @@ h2 {
 .input-group button:hover {
     background-color: #0056b3;
 }
+#backToTop {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    background-color: #f39d4c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: none; 
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#backToTop:hover {
+    background-color: #eec984;
+}
+
