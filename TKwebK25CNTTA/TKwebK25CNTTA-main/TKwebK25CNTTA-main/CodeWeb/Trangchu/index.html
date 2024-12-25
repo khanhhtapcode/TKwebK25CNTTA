@@ -342,24 +342,22 @@
             <!-- Left -->
 
             <!-- Right -->
-            <div>
-                <a href="" class="me-4 text-reset">
+            <div class="social">
+                <a href="https://www.facebook.com/thaimarket.restaurant" target="_blank" rel="noopenner"
+                    class="me-4 text-reset">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://www.tiktok.com/@thaimarket_restaurant" target="_blank" rel="noopenner"
+                    class="me-4 text-reset">
+                    <i class="fa-brands fa-tiktok"></i>
                 </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
+                <a href="https://www.youtube.com/@thaimarketcongtytnhh7543" target="_blank" rel="noopenner"
+                    class="me-4 text-reset">
+                    <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a href="" class="me-4 text-reset">
+                <a href="https://www.instagram.com/thaimarketdeli/" target="_blank" rel="noopenner"
+                    class="me-4 text-reset">
                     <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
                 </a>
             </div>
             <!-- Right -->
@@ -387,7 +385,7 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Products
+                            Sản Phẩm
                         </h6>
                         <p>
                             <a href="#!" class="text-reset">Angular</a>
@@ -408,7 +406,7 @@
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
+                            Link hữu ích
                         </h6>
                         <p>
                             <a href="#!" class="text-reset">Pricing</a>
@@ -428,7 +426,7 @@
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <h6 class="text-uppercase fw-bold mb-4">Liên Hệ</h6>
                         <p><i class="fas fa-home me-3"></i>12 Chùa Bộc, Quang Trung Đống Đa Hà nội</p>
                         <p>
                             <i class="fas fa-envelope me-3"></i>
@@ -473,21 +471,21 @@
                 </a>
             </div>
             <div class=" call-hotline ">
-                    <a href=" tel:0336562004 " target=" _blank ">
-                        <i class=" fa-solid fa-phone "></i>
-                    </a>
+                <a href=" tel:0336562004 " target=" _blank ">
+                    <i class=" fa-solid fa-phone "></i>
+                </a>
             </div>
         </div>
     </div>
-    
+
     <script>
         AOS.init();
     </script>
     <!-- Chatbot -->
     <div class="chat-icon" onclick="toggleChat()">
-        💬 
+        💬
     </div>
-    
+
     <div class="chat-container hidden" id="chatContainer">
         <h2>Chat với AI</h2>
         <div class="chat-box" id="chatBox"></div>
@@ -497,67 +495,67 @@
         </div>
     </div>
     </div>
-        <script>
-            async function sendMessage() {
-                const userInput = document.getElementById('userInput').value;
-                if (!userInput) return;
-    
-                const chatBox = document.getElementById('chatBox');
-                chatBox.innerHTML += `<p><strong>Bạn:</strong> ${userInput}</p>`;
-    
-                document.getElementById('userInput').value = '';
-    
-                 try {
-                 const response = await fetch('http://localhost:3000/chat', { // Đường dẫn API backend
+    <script>
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            if (!userInput) return;
+
+            const chatBox = document.getElementById('chatBox');
+            chatBox.innerHTML += `<p><strong>Bạn:</strong> ${userInput}</p>`;
+
+            document.getElementById('userInput').value = '';
+
+            try {
+                const response = await fetch('http://localhost:3000/chat', { // Đường dẫn API backend
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({ message: userInput }),
                 });
-    
+
                 const data = await response.json();
                 console.log('Server Response:', data);
-    
+
                 if (data.reply) {
                     if (typeof data.reply === 'object') {
-                    // Nếu `reply` là một đối tượng, chuyển đổi sang chuỗi JSON
-                    const text = data.reply.parts[0].text;
-                    chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${text}</p>`;
+                        // Nếu `reply` là một đối tượng, chuyển đổi sang chuỗi JSON
+                        const text = data.reply.parts[0].text;
+                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${text}</p>`;
                     } else {
-                    // Nếu `reply` là chuỗi, hiển thị trực tiếp
-                     chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${data.reply}</p>`;
-                        }
-                    } else {
-                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> Không có câu trả lời từ server.</p>`;
-                        }
+                        // Nếu `reply` là chuỗi, hiển thị trực tiếp
+                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${data.reply}</p>`;
+                    }
+                } else {
+                    chatBox.innerHTML += `<p><strong>Chatbot:</strong> Không có câu trả lời từ server.</p>`;
+                }
 
-                        chatBox.scrollTop = chatBox.scrollHeight;
-                        } catch (error) {
+                chatBox.scrollTop = chatBox.scrollHeight;
+            } catch (error) {
                 chatBox.innerHTML += `<p><strong>Chatbot:</strong> Lỗi khi kết nối tới API.</p>`;
-                        }
-                         }                        
+            }
+        }                        
     </script>
-    
+
     <button id="backToTop" style="display: block;">↑</button>
     <script>
-        
-      const backToTopButton = document.getElementById('backToTop');
-      // Hiển thị nút khi cuộn xuống
-      window.onscroll = function () {
-          if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-              backToTopButton.style.display = "block";
-          } else {
-              backToTopButton.style.display = "none";
-          }
-      };
-      backToTopButton.onclick = function () {
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth' 
-          });
-      };
-  
+
+        const backToTopButton = document.getElementById('backToTop');
+        // Hiển thị nút khi cuộn xuống
+        window.onscroll = function () {
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        backToTopButton.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
     </script>
     <script src=" scripts.js "></script>
 </body>
