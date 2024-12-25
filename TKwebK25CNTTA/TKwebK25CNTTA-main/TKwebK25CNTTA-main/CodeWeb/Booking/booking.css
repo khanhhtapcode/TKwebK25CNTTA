@@ -1247,3 +1247,12 @@ button#button_close {
         width: 100%;
     }
 }
+
+.map-container{
+    background-color: #faf0c8;
+}
+.map-container h1{
+    text-align: center;
+    color: var(--sub-color);
+    font-family: "Playfair Display", Sans-serif;
+}
