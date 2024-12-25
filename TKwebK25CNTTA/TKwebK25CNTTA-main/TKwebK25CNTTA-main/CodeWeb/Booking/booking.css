@@ -1257,7 +1257,7 @@ button#button_close {
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
 }
-=======
+
 #backToTop {
     position: fixed;
     right: 20px;
@@ -1275,4 +1275,3 @@ button#button_close {
 #backToTop:hover {
     background-color: #eec984;
 }
->>>>>>> 86874b0f3bd529ab84b82ef31532b81339824fa3
