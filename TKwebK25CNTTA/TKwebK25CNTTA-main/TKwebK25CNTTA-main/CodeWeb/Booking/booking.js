@@ -95,42 +95,4 @@ document.querySelectorAll('.header nav a').forEach(navItem => {
     });
 });
 
-    function initMap() {
-        // Tọa độ trung tâm
-        const center = { lat: 10.773, lng: 106.69 };
-
-        // Tạo bản đồ
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 12,
-            center: center,
-        });
-
-        // Danh sách chi nhánh
-        const locations = [
-            { lat: 21.038229, lng: 105.770640, name: "Thai Market Trung Hòa, Hà Nội" },
-            { lat: 10.828317, lng: 106.722128, name: "Thai Market Giga Mall, Thủ Đức" },
-            { lat: 10.742750, lng: 106.611931, name: "Thai Market AEON Mall, Bình Tân" },
-            { lat: 10.798840, lng: 106.686618, name: "Thai Market Phan Xích Long, Phú Nhuận" }
-        ];
-
-        // Đánh dấu từng địa điểm
-        locations.forEach((location) => {
-            const marker = new google.maps.Marker({
-                position: { lat: location.lat, lng: location.lng },
-                map: map,
-                title: location.name,
-            });
-
-            // Thêm thông tin khi nhấn vào marker
-            const infowindow = new google.maps.InfoWindow({
-                content: `<h3>${location.name}</h3>`,
-            });
-
-            marker.addListener("click", () => {
-                infowindow.open(map, marker);
-            });
-        });
-    }
-
-
 
