@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
 :root {
     --main-color: #182138;
     --sub-color: #202960;
@@ -63,6 +64,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
     font-family: var(--subtext);
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -240,10 +242,12 @@ a {
 }
 
 @keyframes Inout {
+
     0%,
     100% {
         transform: scale(1);
     }
+
     70% {
         transform: scale(1.1);
     }
@@ -628,7 +632,7 @@ h2 {
 
 /* ------------------------------------Footer------------------------------------ */
 
-.footer{
+.footer {
     background-image: url(../Booking/images/back2.webp);
 }
 
@@ -687,6 +691,7 @@ h2 {
         opacity: 0;
         /* Hiện dần */
     }
+
     to {
         transform: translateX(0);
         /* Trở về vị trí bình thường */
@@ -724,12 +729,15 @@ h2 {
     .big-image .big-image-content p {
         font-size: 16px;
     }
+
     .team-section {
-        padding: 40px 15px; /* Giảm padding cho tablet */
+        padding: 40px 15px;
+        /* Giảm padding cho tablet */
     }
 
     .team-items {
-        width: calc(100% / 2 - 20px); /* Chuyển về 2 cột */
+        width: calc(100% / 2 - 20px);
+        /* Chuyển về 2 cột */
     }
 }
 
@@ -785,12 +793,16 @@ h2 {
         flex-direction: column;
         align-items: flex-end;
     }
+
     .team-section {
-        padding: 30px 10px; /* Giảm thêm padding cho mobile */
+        padding: 30px 10px;
+        /* Giảm thêm padding cho mobile */
     }
 
     .team-items {
-        width: 100%; /* 1 cột cho mobile */
-        margin: 10px 0; /* Khoảng cách trên và dưới */
+        width: 100%;
+        /* 1 cột cho mobile */
+        margin: 10px 0;
+        /* Khoảng cách trên và dưới */
     }
 }
