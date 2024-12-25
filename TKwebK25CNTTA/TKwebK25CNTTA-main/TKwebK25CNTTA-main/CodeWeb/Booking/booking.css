@@ -40,7 +40,7 @@ body {
 
 .header nav {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
 }
 
 .header nav a {
@@ -53,12 +53,14 @@ body {
 }
 
 .header nav a:hover {
-    color: var(--sub-color); /* Đổi màu khi hover */
+    color: var(--sub-color);
+    /* Đổi màu khi hover */
 }
 
 .header .btn-container {
     display: flex;
-    gap: 15px; /* Khoảng cách giữa các nút */
+    gap: 15px;
+    /* Khoảng cách giữa các nút */
     align-items: center;
 }
 
@@ -86,31 +88,44 @@ body {
 
 /* Nút button */
 .btn {
-    height: 45px; /* Tăng chiều cao nút để nó có vẻ mượt mà hơn */
-    width: 160px; /* Tăng chiều rộng để nút có kích thước hài hòa hơn */
-    background-color: #D3A530; /* Màu nền vàng */
+    height: 45px;
+    /* Tăng chiều cao nút để nó có vẻ mượt mà hơn */
+    width: 160px;
+    /* Tăng chiều rộng để nút có kích thước hài hòa hơn */
+    background-color: #D3A530;
+    /* Màu nền vàng */
     border: none;
-    color: white; /* Màu chữ trắng để nổi bật trên nền vàng */
+    color: white;
+    /* Màu chữ trắng để nổi bật trên nền vàng */
     cursor: pointer;
-    border-radius: 25px; /* Bo tròn góc mạnh hơn để tạo dáng nút tròn trịa, hiện đại */
-    transition: all .3s ease; /* Hiệu ứng chuyển tiếp mượt mà khi hover */
-    font-family: 'Roboto', sans-serif; /* Thay đổi font cho đẹp mắt hơn */
+    border-radius: 25px;
+    /* Bo tròn góc mạnh hơn để tạo dáng nút tròn trịa, hiện đại */
+    transition: all .3s ease;
+    /* Hiệu ứng chuyển tiếp mượt mà khi hover */
+    font-family: 'Roboto', sans-serif;
+    /* Thay đổi font cho đẹp mắt hơn */
     font-weight: bold;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px auto;
-    text-transform: uppercase; /* Chữ in hoa cho nút */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ mờ để nút nổi bật hơn */
+    text-transform: uppercase;
+    /* Chữ in hoa cho nút */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    /* Tạo bóng đổ mờ để nút nổi bật hơn */
 }
 
 /* Hiệu ứng hover */
 .btn:hover {
-    background-color: #e1a832; /* Màu nền sáng hơn khi hover */
-    color: white; /* Giữ màu chữ trắng khi hover */
-    transform: translateY(-3px); /* Di chuyển nút lên một chút để tạo cảm giác nút nổi */
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Bóng đổ mờ khi hover */
+    background-color: #e1a832;
+    /* Màu nền sáng hơn khi hover */
+    color: white;
+    /* Giữ màu chữ trắng khi hover */
+    transform: translateY(-3px);
+    /* Di chuyển nút lên một chút để tạo cảm giác nút nổi */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+    /* Bóng đổ mờ khi hover */
 }
 
 
@@ -140,15 +155,16 @@ body {
     font-family: var(--sub-text);
 }
 
-.content h2{
+.content h2 {
     color: var(--sub-color);
-    font-size: 35px; 
+    font-size: 35px;
     font-weight: bold;
-    line-height: 1.6em; 
-    margin-top: 5px; 
+    line-height: 1.6em;
+    margin-top: 5px;
     font-family: "Playfair Display", Sans-serif;
     text-align: center;
 }
+
 .content p {
     font-size: 20px;
     line-height: 1.5;
@@ -156,8 +172,7 @@ body {
     font-weight: bold;
 }
 
-.modal-body 
-.content ul {
+.modal-body .content ul {
     list-style-type: none;
     padding: 0;
 }
@@ -204,21 +219,28 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding-right: 20px;
-    display: flex; /* Đảm bảo các phần tử nằm trên cùng một hàng */
-    justify-content: space-between; /* Đảm bảo khoảng cách giữa các phần tử đều */
-    align-items: center; /* Căn giữa theo chiều dọc */
+    display: flex;
+    /* Đảm bảo các phần tử nằm trên cùng một hàng */
+    justify-content: space-between;
+    /* Đảm bảo khoảng cách giữa các phần tử đều */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
 }
 
 .combo-list {
     display: flex;
-    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    justify-content: center;
+    /* Căn giữa các phần tử theo chiều ngang */
     flex-wrap: wrap;
-    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
 }
 
 .combo-item {
-    flex: 1; /* Điều chỉnh tỷ lệ phần tử để các phần tử có thể chia đều không gian */
-    max-width: 100%; /* Giới hạn tỷ lệ chiều rộng của mỗi phần tử */
+    flex: 1;
+    /* Điều chỉnh tỷ lệ phần tử để các phần tử có thể chia đều không gian */
+    max-width: 100%;
+    /* Giới hạn tỷ lệ chiều rộng của mỗi phần tử */
     background-color: #f9f0c1;
     padding: 10px;
     box-shadow: 0 4px rgba(0, 0, 0, 0.1);
@@ -227,7 +249,8 @@ body {
     margin: 20px;
     transition: all 0.3s ease;
 }
-.combo-item h3{
+
+.combo-item h3 {
     color: var(--sub-color);
 }
 
@@ -269,12 +292,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjusted opacity */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjusted opacity */
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Increased z-index for better visibility */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 999;
+    /* Increased z-index for better visibility */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
 }
 
 /* Các kiểu chung cho overlay */
@@ -284,24 +310,32 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Độ mờ đã điều chỉnh */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Độ mờ đã điều chỉnh */
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Tăng z-index để hiển thị trên cùng */
-    transition: opacity 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    z-index: 999;
+    /* Tăng z-index để hiển thị trên cùng */
+    transition: opacity 0.3s ease;
+    /* Hiệu ứng chuyển động mượt mà */
 }
 
 /* Kiểu dáng cho nội dung của overlay */
 .overlay-content {
     position: relative;
-    background-color: #fff; /* Thêm nền trắng cho nội dung để tăng độ tương phản */
-    padding: 20px; /* Padding tùy chọn cho nội dung */
-    border-radius: 10px; /* Bo tròn các góc */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ */
-    max-width: 100%; 
-    max-height: 100%; 
-    overflow: auto; /* Đảm bảo cuộn khi nội dung tràn ra ngoài */
+    background-color: #fff;
+    /* Thêm nền trắng cho nội dung để tăng độ tương phản */
+    padding: 20px;
+    /* Padding tùy chọn cho nội dung */
+    border-radius: 10px;
+    /* Bo tròn các góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng nhẹ */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    /* Đảm bảo cuộn khi nội dung tràn ra ngoài */
 }
 
 /* Kiểu cho ảnh phóng to */
@@ -325,8 +359,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Nền tối hơn */
-    z-index: -1; /* Đảm bảo nội dung xuất hiện trên đầu */
+    background: rgba(0, 0, 0, 0.2);
+    /* Nền tối hơn */
+    z-index: -1;
+    /* Đảm bảo nội dung xuất hiện trên đầu */
 }
 
 
@@ -414,37 +450,41 @@ body {
     list-style: none;
 }
 
-.footer{
+.footer {
     background-image: url('../Booking/images/back2.webp');
 }
+
 /* ----------------------------modal--------------------------- */
 #modal_container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1000; 
+    z-index: 1000;
     opacity: 0;
-    pointer-events: none;    /*co the tac dong tac phan tu ben duoi(phan modal phu len toan bo trang web) */
+    pointer-events: none;
+    /*co the tac dong tac phan tu ben duoi(phan modal phu len toan bo trang web) */
 }
+
 /* tao 1 class show neu nhu modal tac dong vao thi hien cua so len */
-#modal_container.show{
+#modal_container.show {
     opacity: 1;
     pointer-events: all;
 }
-#modal{
+
+#modal {
     background: var(--backgound-color);
     max-width: 500px;
     margin-left: 500px;
     padding: 20px;
     padding-bottom: 100px;
     border-radius: 10px;
-    z-index: 1; 
+    z-index: 1;
     position: relative;
     transform: translateX(40%);
     border-bottom: 1px solid #dedede;
@@ -452,49 +492,55 @@ body {
     font-family: var(--sub-text);
     transition: all .3s ease-in-out;
 }
-#modal_container.show #modal{
+
+#modal_container.show #modal {
     top: 50px;
     transition: all .3s ease;
 }
-#modal .modal-header{
+
+#modal .modal-header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
 }
+
 #modal .modal-header h1 {
-    
+
     font-size: 25px;
 
 }
+
 #modal .modal-body {
     padding: 10px;
-    font-size: 16px; 
-    color: #333;  
-    background-color: #fff; 
-    border-radius: 8px; 
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
     font-family: "Playfair Display", Sans-serif;
 }
 
 #modal h2 {
-    font-size: 20px; 
+    font-size: 20px;
     font-weight: bold;
-    color: #182138; 
-    margin-bottom: 15px; 
+    color: #182138;
+    margin-bottom: 15px;
 }
 
-#modal p, #modal label {
+#modal p,
+#modal label {
     font-size: 15px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
-#modal input, #modal select {
-    width: 100%; 
+#modal input,
+#modal select {
+    width: 100%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
 }
 
@@ -504,8 +550,8 @@ button#button_close {
     border: none;
     background: none;
     font-size: 20px;
-    color: #333; 
-    cursor: pointer; 
+    color: #333;
+    cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -519,6 +565,7 @@ button#button_close {
     background-position: center;
     position: relative;
 }
+
 .main-content {
     text-align: center;
     padding: 20px;
@@ -531,8 +578,8 @@ button#button_close {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    max-width: 1200px; 
-    width: 100%; 
+    max-width: 1200px;
+    width: 100%;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -552,8 +599,10 @@ button#button_close {
 
 .fp-iframe {
     border: 1px solid lightgray;
-    width: 100%; /* Làm cho iframe chiếm toàn bộ chiều rộng modal */
-    height: 600px; /* Tăng chiều cao iframe */
+    width: 100%;
+    /* Làm cho iframe chiếm toàn bộ chiều rộng modal */
+    height: 600px;
+    /* Tăng chiều cao iframe */
 }
 
 
@@ -580,7 +629,7 @@ button#button_close {
 }
 
 h1 {
-    font-family: var(--sub-text) ;
+    font-family: var(--sub-text);
     font-size: 40px;
     color: #3e2f20;
     margin-bottom: 10px;
@@ -624,6 +673,7 @@ h1 {
     padding: 20px;
     text-align: center;
 }
+
 /* .thucdon:hover{
     transform: skewY(2deg);
 } */
@@ -647,31 +697,34 @@ p {
 
 /*------------------------------------------------------- model lay tu phan booking cs-------------------------------------- */
 #modal_container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1000; 
+    z-index: 1000;
     opacity: 0;
-    pointer-events: none;    /*co the tac dong tac phan tu ben duoi(phan modal phu len toan bo trang web) */
+    pointer-events: none;
+    /*co the tac dong tac phan tu ben duoi(phan modal phu len toan bo trang web) */
 }
-#modal_container.show{
+
+#modal_container.show {
     opacity: 1;
     pointer-events: all;
 }
-#modal{
+
+#modal {
     background: var(--backgound-color);
     max-width: 500px;
     margin-left: 500px;
     padding: 20px;
     padding-bottom: 100px;
     border-radius: 10px;
-    z-index: 1; 
+    z-index: 1;
     position: relative;
     transform: translateX(40%);
     border-bottom: 1px solid #dedede;
@@ -679,49 +732,62 @@ p {
     font-family: var(--sub-text);
     transition: all .3s ease-in-out;
 }
-#modal_container.show #modal{
+
+#modal_container.show #modal {
     top: 50px;
     transition: all .3s ease;
 }
-#modal .modal-header{
+
+#modal .modal-header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
 }
+
 #modal .modal-header h1 {
-    
+
     font-size: 25px;
 
 }
+
 #modal .modal-body {
     padding: 10px;
-    font-size: 16px; 
-    color: #333;  
-    background-color: #fff; 
-    border-radius: 8px; 
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
     font-family: "Playfair Display", Sans-serif;
 }
 
 #modal h2 {
-    font-size: 20px; /* Heading size */
+    font-size: 20px;
+    /* Heading size */
     font-weight: bold;
-    color: #182138; /* Color for the header text */
-    margin-bottom: 15px; /* Space below heading */
+    color: #182138;
+    /* Color for the header text */
+    margin-bottom: 15px;
+    /* Space below heading */
 }
 
-#modal p, #modal label {
+#modal p,
+#modal label {
     font-size: 15px;
-    margin-bottom: 10px; /* Space below text and labels */
+    margin-bottom: 10px;
+    /* Space below text and labels */
 }
 
-#modal input, #modal select {
-    width: 100%; /* Full width for input fields */
+#modal input,
+#modal select {
+    width: 100%;
+    /* Full width for input fields */
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc;
+    /* Border for inputs */
+    border-radius: 5px;
+    /* Rounded corners */
     font-size: 16px;
 }
 
@@ -733,183 +799,245 @@ button#button_close {
     font-size: 20px;
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
-    cursor: pointer; /* Pointer cursor for button */
+    cursor: pointer;
+    /* Pointer cursor for button */
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
 .justify-content {
     justify-content: space-between;
 }
 
-.btn a{
+.btn a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
-.btn:hover{
+.btn:hover {
     transform: translateY(-8%);
 }
 
-.main-content h1{
+.main-content h1 {
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
 }
-.thucdon-info{
+
+.thucdon-info {
     align-items: center;
     padding: auto;
 }
-.thucdon-info img{
+
+.thucdon-info img {
     transition: all .3s ease;
 }
-.thucdon-info h2{
+
+.thucdon-info h2 {
     font-size: 18px;
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
     margin-bottom: 10px;
 }
-.thucdon-info p{
+
+.thucdon-info p {
     font-size: 15px;
     color: var(--sub-color);
     font-family: "Playfair Display", Sans-serif;
     margin-bottom: 10px;
 }
 
-.thucdon-info img:hover{
+.thucdon-info img:hover {
     transform: translateY(-8%);
 }
 
 /* Áp dụng nền hình ảnh cho phần khám phá */
 
 .content-khampha {
-    background-image: url(../images/background-all.png); /* Hình nền */
-    background-size: cover; /* Hình nền phủ toàn bộ */
-    background-repeat: no-repeat; /* Không lặp lại hình nền */
-    background-position: center; /* Hình nền căn giữa */
-    padding: 50px 0; /* Khoảng cách trên dưới */
+    background-image: url(../images/background-all.png);
+    /* Hình nền */
+    background-size: cover;
+    /* Hình nền phủ toàn bộ */
+    background-repeat: no-repeat;
+    /* Không lặp lại hình nền */
+    background-position: center;
+    /* Hình nền căn giữa */
+    padding: 50px 0;
+    /* Khoảng cách trên dưới */
 }
 
 /* Container chính */
 .container {
-    max-width: 1200px; /* Độ rộng tối đa */
-    margin: 0 auto; /* Căn giữa container */
-    padding: 20px; /* Khoảng cách nội dung bên trong */
-    display: flex; /* Sử dụng flexbox */
-    flex-direction: column; /* Sắp xếp theo cột */
+    max-width: 1200px;
+    /* Độ rộng tối đa */
+    margin: 0 auto;
+    /* Căn giữa container */
+    padding: 20px;
+    /* Khoảng cách nội dung bên trong */
+    display: flex;
+    /* Sử dụng flexbox */
+    flex-direction: column;
+    /* Sắp xếp theo cột */
 }
 
 /* Dòng tiêu đề */
 .row.justify-content h1 {
-    color: var(--sub-color); /* Màu chữ */
-    font-family: "Playfair Display", serif; /* Phông chữ */
-    font-size: 60px; /* Kích thước chữ */
-    font-weight: 500; /* Độ đậm chữ */
-    line-height: 1.4em; /* Khoảng cách dòng */
-    text-align: center; /* Căn giữa chữ */
-    margin-bottom: 10px; /* Khoảng cách dưới */
+    color: var(--sub-color);
+    /* Màu chữ */
+    font-family: "Playfair Display", serif;
+    /* Phông chữ */
+    font-size: 60px;
+    /* Kích thước chữ */
+    font-weight: 500;
+    /* Độ đậm chữ */
+    line-height: 1.4em;
+    /* Khoảng cách dòng */
+    text-align: center;
+    /* Căn giữa chữ */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới */
     justify-content: center;
 }
 
 .row.justify-content h3 {
-    color: var(--sub-color); /* Màu chữ */
-    font-family: "Playfair Display", serif; /* Phông chữ */
-    font-size: 20px; /* Kích thước nhỏ hơn */
-    font-weight: 500; /* Độ đậm vừa phải */
-    line-height: 1.4em; /* Khoảng cách dòng */
-    text-align: left; /* Căn giữa chữ */
-    margin-top: 5px; /* Khoảng cách trên */
+    color: var(--sub-color);
+    /* Màu chữ */
+    font-family: "Playfair Display", serif;
+    /* Phông chữ */
+    font-size: 20px;
+    /* Kích thước nhỏ hơn */
+    font-weight: 500;
+    /* Độ đậm vừa phải */
+    line-height: 1.4em;
+    /* Khoảng cách dòng */
+    text-align: left;
+    /* Căn giữa chữ */
+    margin-top: 5px;
+    /* Khoảng cách trên */
 }
 
 /* Phần chính của khám phá */
 
 /* Item khám phá */
 .khampha-item {
-    display: flex; /* Flexbox để sắp xếp theo hàng */
-    flex-direction: row; /* Sắp xếp các item nằm ngang */
-    gap: 20px; /* Khoảng cách giữa các phần tử */
-    align-items: center; /* Căn giữa theo trục dọc */
-    margin-top: 5px; /* Khoảng cách trên */
+    display: flex;
+    /* Flexbox để sắp xếp theo hàng */
+    flex-direction: row;
+    /* Sắp xếp các item nằm ngang */
+    gap: 20px;
+    /* Khoảng cách giữa các phần tử */
+    align-items: center;
+    /* Căn giữa theo trục dọc */
+    margin-top: 5px;
+    /* Khoảng cách trên */
     text-align: center;
 }
 
 /* Văn bản trong item */
 .khampha-text h2 {
     color: var(--sub-color);
-    font-size: 33px; 
+    font-size: 33px;
     font-weight: bold;
-    line-height: 1.6em; 
-    margin-bottom: 5px; 
+    line-height: 1.6em;
+    margin-bottom: 5px;
     font-family: "Playfair Display", Sans-serif;
 }
 
 .khampha-text p {
-    color: #555; /* Màu chữ nhẹ hơn */
-    font-size: 18px; /* Kích thước chữ */
-    line-height: 1.8em; /* Khoảng cách dòng lớn hơn */
-    text-align: center; /* Canh đều văn bản */
+    color: #555;
+    /* Màu chữ nhẹ hơn */
+    font-size: 18px;
+    /* Kích thước chữ */
+    line-height: 1.8em;
+    /* Khoảng cách dòng lớn hơn */
+    text-align: center;
+    /* Canh đều văn bản */
     font-family: "Fira Sans", Sans-serif;
 }
 
 /* Hình ảnh trong item */
 .khampha-image img {
-    width: 250px; /* Kích thước tối đa */
-    height: auto; /* Tự điều chỉnh chiều cao */
-    border-radius: 10px; /* Bo góc hình ảnh */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng nhẹ */
-    transition: all 0.3s ease-in; /* Hiệu ứng chuyển đổi mượt */
+    width: 250px;
+    /* Kích thước tối đa */
+    height: auto;
+    /* Tự điều chỉnh chiều cao */
+    border-radius: 10px;
+    /* Bo góc hình ảnh */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Hiệu ứng bóng nhẹ */
+    transition: all 0.3s ease-in;
+    /* Hiệu ứng chuyển đổi mượt */
 }
 
 .khampha-image img:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.0); 
+    transform: scale(1.1);
+    filter: brightness(1.0);
 }
 
 
 .khampha-item2 {
-    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử theo hàng ngang */
-    align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp các phần tử theo hàng ngang */
+    align-items: center;
+    /* Canh giữa các phần tử theo chiều dọc */
 }
 
 .khampha-item2 {
-    display: flex; /* Sắp xếp các phần tử theo hàng ngang */
-    align-items: flex-start; /* Canh các phần tử ở phía trên cùng */
-    justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
-    gap: 20px; /* Khoảng cách giữa văn bản và hình ảnh */
-    margin-bottom: 5px; /* Khoảng cách giữa các mục */
+    display: flex;
+    /* Sắp xếp các phần tử theo hàng ngang */
+    align-items: flex-start;
+    /* Canh các phần tử ở phía trên cùng */
+    justify-content: space-between;
+    /* Tạo khoảng cách đều giữa các phần tử */
+    gap: 20px;
+    /* Khoảng cách giữa văn bản và hình ảnh */
+    margin-bottom: 5px;
+    /* Khoảng cách giữa các mục */
 }
 
 .khampha-text2 {
-    flex: 1; /* Phần văn bản chiếm một phần không gian */
-    padding: 20px; /* Khoảng cách giữa viền ngoài và nội dung văn bản */
+    flex: 1;
+    /* Phần văn bản chiếm một phần không gian */
+    padding: 20px;
+    /* Khoảng cách giữa viền ngoài và nội dung văn bản */
 }
 
 .khampha-image2 {
-    flex: 1; /* Hình ảnh chiếm một phần không gian */
+    flex: 1;
+    /* Hình ảnh chiếm một phần không gian */
     display: flex;
-    justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
-    align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+    justify-content: center;
+    /* Căn giữa hình ảnh theo chiều ngang */
+    align-items: center;
+    /* Căn giữa hình ảnh theo chiều dọc */
 }
 
 .khampha-image2 img {
     width: 700px;
-    height: auto; /* Duy trì tỷ lệ khung hình của ảnh */
-    border-radius: 10px; /* Bo tròn nhẹ các góc hình ảnh */
+    height: auto;
+    /* Duy trì tỷ lệ khung hình của ảnh */
+    border-radius: 10px;
+    /* Bo tròn nhẹ các góc hình ảnh */
 }
 
 .khampha-text2 h2 {
     color: var(--sub-color);
-    font-size: 33px; 
+    font-size: 33px;
     font-weight: bold;
-    line-height: 1.6em; 
-    margin-bottom: 5px; 
+    line-height: 1.6em;
+    margin-bottom: 5px;
     font-family: "Playfair Display", Sans-serif;
 }
 
 .khampha-text2 p {
-    color: #555; /* Màu chữ nhẹ hơn */
-    font-size: 17px; /* Kích thước chữ */
-    line-height: 1.8em; /* Khoảng cách dòng lớn hơn */
-    text-align: center; /* Canh đều văn bản */
+    color: #555;
+    /* Màu chữ nhẹ hơn */
+    font-size: 17px;
+    /* Kích thước chữ */
+    line-height: 1.8em;
+    /* Khoảng cách dòng lớn hơn */
+    text-align: center;
+    /* Canh đều văn bản */
     font-family: "Fira Sans", Sans-serif;
 }
 
@@ -1017,21 +1145,25 @@ button#button_close {
         width: 95%;
         height: 60%;
     }
+
     .content-khampha .main-khampha {
         flex-direction: column;
         align-items: center;
     }
 
-    .khampha-item, .khampha-item2 {
+    .khampha-item,
+    .khampha-item2 {
         width: 100%;
     }
 
-    .khampha-item .khampha-text, .khampha-item2 .khampha-text2 {
+    .khampha-item .khampha-text,
+    .khampha-item2 .khampha-text2 {
         text-align: center;
         padding: 0 20px;
     }
 
-    .khampha-item img, .khampha-item2 img {
+    .khampha-item img,
+    .khampha-item2 img {
         width: 80%;
         margin-bottom: 20px;
     }
@@ -1100,15 +1232,18 @@ button#button_close {
         max-width: 90%;
         padding: 15px;
     }
+
     .content-khampha {
         padding: 20px 10px;
     }
 
-    .khampha-item .khampha-text, .khampha-item2 .khampha-text2 {
+    .khampha-item .khampha-text,
+    .khampha-item2 .khampha-text2 {
         font-size: 14px;
     }
 
-    .khampha-item img, .khampha-item2 img {
+    .khampha-item img,
+    .khampha-item2 img {
         width: 100%;
     }
-} 
+}
