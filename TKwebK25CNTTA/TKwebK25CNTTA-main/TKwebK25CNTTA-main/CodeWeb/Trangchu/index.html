@@ -461,7 +461,6 @@
     <!-- -------------------------------Lien He-------------------------------------- -->
     </section>
     <div class="float-contact">
-        <div class="contact-trigger">Liên hệ</div>
         <div class="contact-icons">
             <div class="chat-whatsapp">
                 <a title="" href="https://web.whatsapp.com/" target="_blank">
@@ -469,22 +468,77 @@
                 </a>
             </div>
             <div class="chat-facebook">
-                <a href=https://m.me/504099972782610 " target=" _blank ">
+                <a href="https://m.me/504099972782610" target=" _blank ">
                     <i title=" Nhắn tin ngay " class=" fa-brands fa-facebook-messenger "></i>
                 </a>
             </div>
             <div class=" call-hotline ">
                     <a href=" tel:0336562004 " target=" _blank ">
-                        <i class=" fa-solid fa-phone "></i>
+                        <d class=" fa-solid fa-phone "></d>
                     </a>
             </div>
         </div>
     </div>
-
-    <script src=" scripts.js "></script>
+    
     <script>
         AOS.init();
     </script>
+    <!-- Chatbot -->
+    <div class="chat-icon" onclick="toggleChat()">
+        💬 
+    </div>
+    
+    <div class="chat-container hidden" id="chatContainer">
+        <h2>Chat với AI</h2>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Nhập tin nhắn của bạn..." />
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+    </div>
+    </div>
+        <script>
+            async function sendMessage() {
+                const userInput = document.getElementById('userInput').value;
+                if (!userInput) return;
+    
+                const chatBox = document.getElementById('chatBox');
+                chatBox.innerHTML += `<p><strong>Bạn:</strong> ${userInput}</p>`;
+    
+                document.getElementById('userInput').value = '';
+    
+                 try {
+                 const response = await fetch('http://localhost:3000/chat', { // Đường dẫn API backend
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: userInput }),
+                });
+    
+                const data = await response.json();
+                console.log('Server Response:', data);
+    
+                if (data.reply) {
+                    if (typeof data.reply === 'object') {
+                    // Nếu `reply` là một đối tượng, chuyển đổi sang chuỗi JSON
+                    const text = data.reply.parts[0].text;
+                    chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${text}</p>`;
+                    } else {
+                    // Nếu `reply` là chuỗi, hiển thị trực tiếp
+                     chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${data.reply}</p>`;
+                        }
+                    } else {
+                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> Không có câu trả lời từ server.</p>`;
+                        }
+
+                        chatBox.scrollTop = chatBox.scrollHeight;
+                        } catch (error) {
+                chatBox.innerHTML += `<p><strong>Chatbot:</strong> Lỗi khi kết nối tới API.</p>`;
+                        }
+                         }                        
+    </script>
+    <script src=" scripts.js "></script>
 </body>
 
 </html>

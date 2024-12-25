@@ -66,3 +66,20 @@ document.querySelectorAll('.menu-nav a').forEach(navItem => {
 
 // Optional: Set the default visible section to 'lunch'
 document.getElementById('lunch').classList.add('active');
+// Chat bot
+ 
+//add event chatbot                         
+ function toggleChat() {
+        var chatContainer = document.getElementById("chatContainer");
+        if (chatContainer.classList.contains("hidden")) {
+            chatContainer.classList.remove("hidden");
+            chatContainer.style.transform = "scale(1)";
+            chatContainer.style.opacity = "1";
+        } else {
+            chatContainer.style.transform = "scale(0.9)";
+            chatContainer.style.opacity = "0";
+            setTimeout(function() {
+                chatContainer.classList.add("hidden");
+            }, 300);
+        }
+    }
