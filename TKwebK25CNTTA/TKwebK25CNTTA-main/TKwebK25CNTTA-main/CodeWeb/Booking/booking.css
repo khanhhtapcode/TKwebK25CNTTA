@@ -84,29 +84,35 @@ body {
     background-color: #e3bbbb;
 }
 
+/* Nút button */
 .btn {
-    height: 40px;
-    width: 150px;
-    background-color: #D3A530;
+    height: 45px; /* Tăng chiều cao nút để nó có vẻ mượt mà hơn */
+    width: 160px; /* Tăng chiều rộng để nút có kích thước hài hòa hơn */
+    background-color: #D3A530; /* Màu nền vàng */
     border: none;
-    color: black;
+    color: white; /* Màu chữ trắng để nổi bật trên nền vàng */
     cursor: pointer;
-    border-radius: 5px;
-    transition: all .3s ease;
-    font-family: var(--subtext);
-    margin: 15px auto;
+    border-radius: 25px; /* Bo tròn góc mạnh hơn để tạo dáng nút tròn trịa, hiện đại */
+    transition: all .3s ease; /* Hiệu ứng chuyển tiếp mượt mà khi hover */
+    font-family: 'Roboto', sans-serif; /* Thay đổi font cho đẹp mắt hơn */
     font-weight: bold;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    text-transform: uppercase; /* Chữ in hoa cho nút */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ mờ để nút nổi bật hơn */
 }
 
+/* Hiệu ứng hover */
 .btn:hover {
-    background-color: var(--backgound-color);
-    color: var(--sub-color);
+    background-color: #e1a832; /* Màu nền sáng hơn khi hover */
+    color: white; /* Giữ màu chữ trắng khi hover */
+    transform: translateY(-3px); /* Di chuyển nút lên một chút để tạo cảm giác nút nổi */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Bóng đổ mờ khi hover */
 }
+
 
 .main-image {
     width: 100%;
@@ -408,51 +414,9 @@ body {
     list-style: none;
 }
 
-.footer {
-    background-image: url(../images/footer.jpg);
-    padding-top: 50px;
-    padding-right: 80px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    text-align: center;
-    position: relative;
+.footer{
+    background-image: url('../Booking/images/back2.webp');
 }
-
-.footer h2 {
-    color: var(--text-color);
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-family: var(--sub-text);
-}
-
-.footer p {
-    color: white;
-    font-family: var(--subtext);
-    margin-bottom: 12px;
-}
-
-.footer-item {
-    text-align: center;
-    width: calc(100%/3);
-}
-
-.footer-item i {
-    color: white;
-    font-size: 25px;
-    margin-right: 12px;
-}
-
-.footer-copyright {
-    text-align: center;
-    padding: 50px 0;
-    color: var(--text-color);
-    border-top: 2px solid var(--text-color);
-    font-family: var(--sub-text);
-    margin-top: 20px;
-}
-
 /* ----------------------------modal--------------------------- */
 #modal_container {
     display: flex; 
@@ -953,7 +917,7 @@ button#button_close {
 /* Responsive styles */
 
 /* Tablet: màn hình có chiều rộng từ 768px đến 1024px */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+/* @media screen and (max-width: 1024px) and (min-width: 768px) {
     .header {
         flex-direction: column;
         padding: 10px 20px;
@@ -1039,11 +1003,11 @@ button#button_close {
         gap: 10px;
     }
 
-    #booking_btn, .btn {
+    /* #booking_btn, .btn {
         width: 100%;
         padding: 12px;
         font-size: 16px;
-    }
+    } */
 
     .modal-content {
         width: 95%;
@@ -1147,6 +1111,4 @@ button#button_close {
     .khampha-item img, .khampha-item2 img {
         width: 100%;
     }
-}
-
-
+} 
