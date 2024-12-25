@@ -23,6 +23,7 @@ body{
     background-image: url("../images/background-all.png");
 }
 h1 {
+    font-family: "Playfair Display", Sans-serif;
     text-align: center;
     margin: 20px 10px;
     color: #333;
@@ -52,9 +53,11 @@ h1 {
     display: none;
 }
 .summary p {
+    font-family: "Playfair Display", Sans-serif;
     margin: 5px 0;
 }
 .btn {
+    font-family: "Playfair Display", Sans-serif;
     display: block;
     width: 100%;
     padding: 12px;
