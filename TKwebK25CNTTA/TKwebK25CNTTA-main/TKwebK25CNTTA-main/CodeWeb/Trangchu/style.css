@@ -628,79 +628,9 @@ h2 {
 
 /* ------------------------------------Footer------------------------------------ */
 
-.footer {
-    background-image: url(../images/footer.jpg);
-    padding-top: 80px;
-    padding-right: 80px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    text-align: center;
-    position: relative;
+.footer{
+    background-image: url(../Booking/images/back2.webp);
 }
-
-.footer h2 {
-    color: var(--text-color);
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-family: var(--sub-text);
-}
-
-.footer p {
-    color: white;
-    font-family: var(--subtext);
-    margin-bottom: 12px;
-}
-
-.footer-item {
-    text-align: center;
-    width: calc(100%/3);
-}
-
-.footer-item i {
-    color: white;
-    font-size: 25px;
-    margin-right: 12px;
-}
-
-.footer-copyright {
-    text-align: center;
-    padding: 50px 0;
-    color: var(--text-color);
-    border-top: 2px solid var(--text-color);
-    font-family: var(--sub-text);
-    margin-top: 20px;
-}
-
-.float-contact {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1;
-}
-
-.chat-facebook,
-.chat-whatsapp,
-.call-hotline {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 10px;
-    transition: all .3s ease;
-    background-color: #007BFF;
-    padding-top: 5px;
-}
-
-.chat-facebook,
-.chat-whatsapp,
-.call-hotline i {
-    background-color: white;
-}
-
 
 /*---------------------------------------- contact-----------------------------------  */
 
