@@ -90,7 +90,7 @@ body {
 .btn {
     height: 45px;
     /* Tăng chiều cao nút để nó có vẻ mượt mà hơn */
-    width: 160px;
+    width: 200px;
     /* Tăng chiều rộng để nút có kích thước hài hòa hơn */
     background-color: #D3A530;
     /* Màu nền vàng */
@@ -1246,4 +1246,32 @@ button#button_close {
     .khampha-item2 img {
         width: 100%;
     }
+}
+
+
+.map-container{
+    background-color: #faf0c8;
+}
+.map-container h1{
+    text-align: center;
+    color: var(--sub-color);
+    font-family: "Playfair Display", Sans-serif;
+}
+
+#backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #f39d4c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: none; 
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#backToTop:hover {
+    background-color: #eec984;
 }
