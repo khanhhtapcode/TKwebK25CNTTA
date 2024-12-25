@@ -211,7 +211,9 @@ a {
     font-size: 25px;
     font-family: "Roboto", serif;
 }
-
+.menu-items a:hover {
+    font-style: italic;
+}
 
 /* background */
 
@@ -273,6 +275,7 @@ a {
     font-size: 49px;
     color: var(--text-color);
     font-family: 'Dancing Script';
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 .big-image .big-image-content p {
@@ -281,6 +284,7 @@ a {
     margin: 15px 0;
     font-weight: bold;
     font-family: "Roboto", serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -332,6 +336,7 @@ a {
     font-size: 30px;
     color: var(--text-color);
     text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0.5, 0.5);
 }
 
 .section-title h2::before {
@@ -650,6 +655,7 @@ h2 {
 
 .contact-trigger {
     background-color: #007bff;
+    /* Màu nền */
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
@@ -664,24 +670,37 @@ h2 {
 }
 
 .contact-icons {
-    display: none;
-    /* Mặc định ẩn */
-    margin-bottom: 10px;
-    position: absolute;
-    /* Đặt tuyệt đối để dễ di chuyển */
-    right: 100%;
-    /* Đặt các icon ra ngoài bên phải */
-}
-
-.float-contact:hover .contact-icons {
-    display: contents;
-    /* Chuyển thành dạng hàng ngang */
-    animation: slideIn 0.5s ease forwards;
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa các icon */
 }
 
 .contact-icons div {
-    margin: 0 10px;
-    /* Khoảng cách nhỏ giữa các icon */
+    background-color: #007bff; /* Màu nền icon */
+    border-radius: 50%; /* Bo tròn icon */
+    width: 50px; /* Chiều rộng icon */
+    height: 50px; /* Chiều cao icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.contact-icons div:hover {
+    background-color: #0056b3; /* Đổi màu nền khi hover */
+    transform: scale(1.1); /* Phóng to icon nhẹ */
+}
+
+.contact-icons i {
+    color: white; /* Màu biểu tượng */
+    font-size: 24px; /* Kích thước biểu tượng */
+    text-align: center;
+}
+
+.contact-icons a {
+    text-decoration: none; /* Bỏ gạch dưới liên kết */
+    display: block;
 }
 
 @keyframes slideIn {
@@ -699,110 +718,139 @@ h2 {
         /* Hiện hoàn toàn */
     }
 }
-
-
-/*------------------------------- responsive----------------------------------- */
-/* Tablet (768px - 1024px) */
-@media (max-width: 1024px) and (min-width:768px) {
-    .menu-title .menu-button {
-        font-size: 22px;
-    }
-
-    .food-items {
-        width: calc(100% / 2);
-        padding: 10px;
-    }
-
-    .review-item {
-        width: calc(100% / 2 - 20px);
-        margin: 10px;
-    }
-
-    .team-items {
-        width: calc(100% / 2);
-    }
-
-    .big-image .big-image-content h2 {
-        font-size: 36px;
-    }
-
-    .big-image .big-image-content p {
-        font-size: 16px;
-    }
-
-    .team-section {
-        padding: 40px 15px;
-        /* Giảm padding cho tablet */
-    }
-
-    .team-items {
-        width: calc(100% / 2 - 20px);
-        /* Chuyển về 2 cột */
-    }
+/* Hộp chat */
+.chat-icon {
+    position: fixed;
+    bottom: 20px; /* Đặt vị trí ở phía dưới */
+    left: 20px;   /* Đặt vị trí ở bên trái */
+    width: 40px;  /* Kích thước rộng */
+    height: 40px; /* Kích thước cao */
+    background-color: #007bff; /* Màu nền xanh */
+    border-radius: 50%; /* Biến thành hình tròn */
+    display: flex; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+}
+.chat-icon :hover {
+    background-color: #074991; /* Đổi màu nền khi hover */
+}
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    left: 20px; /* Đưa hộp chat về bên trái */
+    width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
 }
 
-/*---------------------------------- Mobile (dưới 768px)----------------------------------------- */
-@media (max-width: 768px) {
-    .menu-title .menu-button {
-        font-size: 20px;
-    }
-
-    .food-items {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .review-item {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .team-items {
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .big-image .big-image-content h2 {
-        font-size: 28px;
-    }
-
-    .big-image .big-image-content p {
-        font-size: 14px;
-    }
-
-    .about-item {
-        width: 100%;
-    }
-
-    .footer {
-        padding: 20px;
-    }
-
-    .footer-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .float-contact {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .contact-icons {
-        right: 0;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .team-section {
-        padding: 30px 10px;
-        /* Giảm thêm padding cho mobile */
-    }
-
-    .team-items {
-        width: 100%;
-        /* 1 cột cho mobile */
-        margin: 10px 0;
-        /* Khoảng cách trên và dưới */
-    }
+.chat-container.hidden {
+    display: none;
 }
+
+/* Header của hộp chat */
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center; /* Căn giữa nội dung */
+    font-size: 20px; /* Tăng kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    letter-spacing: 1px; /* Giãn khoảng cách giữa các chữ */
+    border-bottom: 2px solid #0056b3;
+    position: relative; /* Để đặt nút đóng */
+}
+
+.chat-header h2 {
+    margin: 0;
+}
+
+.close-chat {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.close-chat:hover {
+    color: #ccc;
+}
+
+/* Nội dung chat */
+.chat-box {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Input và nút gửi */
+.input-group {
+    display: flex;
+    padding: 12px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+.input-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #0056b3;
+}
+#backToTop {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    background-color: #f39d4c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: none; 
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#backToTop:hover {
+    background-color: #eec984;
+}
+
