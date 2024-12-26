@@ -83,3 +83,20 @@ document.getElementById('lunch').classList.add('active');
             }, 300);
         }
     }
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to hide a section by its ID
+        function hideSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'none';
+            }
+        }
+
+        // Example: Hide "Bữa Trưa", "Khai Vị", and "Đồ Uống" sections
+        hideSection('lunch');
+        hideSection('appetizer');
+        hideSection('drinks');
+    });
+

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: myapp
+    repo: https://github.com/username/myapp
+    branch: main
+    buildCommand: "npm install && npm run build"
+    startCommand: "node src/index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+buildCommand: "npm install && npm run build"
+publishPath: build
