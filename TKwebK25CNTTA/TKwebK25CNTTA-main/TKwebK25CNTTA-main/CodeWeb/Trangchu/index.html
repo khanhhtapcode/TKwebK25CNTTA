@@ -495,68 +495,24 @@
         </div>
     </div>
     </div>
-    <script>
-        async function sendMessage() {
-            const userInput = document.getElementById('userInput').value;
-            if (!userInput) return;
-
-            const chatBox = document.getElementById('chatBox');
-            chatBox.innerHTML += `<p><strong>Bạn:</strong> ${userInput}</p>`;
-
-            document.getElementById('userInput').value = '';
-
-            try {
-                const response = await fetch('http://localhost:3000/chat', { // Đường dẫn API backend
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ message: userInput }),
-                });
-
-                const data = await response.json();
-                console.log('Server Response:', data);
-
-                if (data.reply) {
-                    if (typeof data.reply === 'object') {
-                        // Nếu `reply` là một đối tượng, chuyển đổi sang chuỗi JSON
-                        const text = data.reply.parts[0].text;
-                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${text}</p>`;
-                    } else {
-                        // Nếu `reply` là chuỗi, hiển thị trực tiếp
-                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${data.reply}</p>`;
-                    }
-                } else {
-                    chatBox.innerHTML += `<p><strong>Chatbot:</strong> Không có câu trả lời từ server.</p>`;
-                }
-
-                chatBox.scrollTop = chatBox.scrollHeight;
-            } catch (error) {
-                chatBox.innerHTML += `<p><strong>Chatbot:</strong> ChatBot chạy bình thường nhé nhưng mà trên máy bạn không có server của mình :< )) .</p>`;
-            }
-        }                        
-    </script>
-
     <button id="backToTop" style="display: block;">↑</button>
-    <script>
-
-        const backToTopButton = document.getElementById('backToTop');
-        // Hiển thị nút khi cuộn xuống
-        window.onscroll = function () {
+        <script>
+            const backToTopButton = document.getElementById('backToTop');
+// Hiển thị nút khi cuộn xuống
+            window.onscroll = function () {
             if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
                 backToTopButton.style.display = "block";
             } else {
                 backToTopButton.style.display = "none";
             }
-        };
-        backToTopButton.onclick = function () {
+            };
+            backToTopButton.onclick = function () {
             window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            top: 0,
+            behavior: 'smooth'
             });
         };
-
-    </script>
+</script>
     <script src=" scripts.js "></script>
 </body>
 

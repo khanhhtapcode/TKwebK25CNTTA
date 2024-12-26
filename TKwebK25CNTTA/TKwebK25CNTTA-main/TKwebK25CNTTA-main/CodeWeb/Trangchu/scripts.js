@@ -69,7 +69,7 @@ document.getElementById('lunch').classList.add('active');
 // Chat bot
  
 //add event chatbot                         
- function toggleChat() {
+function toggleChat() {
         var chatContainer = document.getElementById("chatContainer");
         if (chatContainer.classList.contains("hidden")) {
             chatContainer.classList.remove("hidden");
@@ -99,4 +99,48 @@ document.getElementById('lunch').classList.add('active');
         hideSection('appetizer');
         hideSection('drinks');
     });
+// Chat bot
+async function sendMessage() {
+    const userInput = document.getElementById('userInput').value;
+     if (!userInput) return;
 
+        const chatBox = document.getElementById('chatBox');
+        chatBox.innerHTML += `<p><strong>Bạn:</strong> ${userInput}</p>`;
+
+        document.getElementById('userInput').value = '';
+
+            try {
+                const response = await fetch('http://localhost:3000/chat', { // Đường dẫn API backend
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: userInput }),
+                });
+
+                const data = await response.json();
+
+                if (data.reply) {
+                    if (typeof data.reply === 'object') {
+                        // Nếu `reply` là một đối tượng, chuyển đổi sang chuỗi JSON
+                        const text = data.reply.parts[0].text;
+                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${text}</p>`;
+                    } else {
+                        // Nếu `reply` là chuỗi, hiển thị trực tiếp
+                        chatBox.innerHTML += `<p><strong>Chatbot:</strong> ${data.reply}</p>`;
+                    }
+                } else {
+                    chatBox.innerHTML += `<p><strong>Chatbot:</strong> Không có câu trả lời từ server.</p>`;
+                }
+
+                chatBox.scrollTop = chatBox.scrollHeight;
+            } catch (error) {
+                chatBox.innerHTML += `<p><strong>Chatbot:</strong> ChatBot chạy bình thường nhé nhưng mà trên máy bạn không có server của mình :< )) .</p>`;
+            }
+        }
+// scroll to top
+
+
+
+
+      
