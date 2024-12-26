@@ -417,7 +417,7 @@ a {
 .food-item {
     display: flex;
     align-items: center;
-    margin-left: 33.33px;
+    margin-left: 60px;
 }
 
 .food-item img {
@@ -432,6 +432,7 @@ a {
     color: var(--text-color);
     transition: all .3s ease;
     font-size: 12px;
+    text-align: center;
 }
 
 .food-item h2 {
